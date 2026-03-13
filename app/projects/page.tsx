@@ -1,6 +1,16 @@
+import Nav from "@/components/nav";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectsPage() {
+  const projectTitleLinkStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "6px",
+    fontWeight: "bold",
+    borderBottom: "2px dotted var(--ink)",
+  } as const;
+
   return (
     <div className="page">
       <div className="headerWindow">
@@ -21,84 +31,7 @@ export default function ProjectsPage() {
       </div>
 
       <div className="grid">
-        <aside className="navWrap">
-          <div className="navCard">
-            <div className="navTitle">NAV</div>
-            <div className="navGrid">
-              <Link href="/" className="navBtn">
-                <strong>About</strong>
-              </Link>
-              <Link href="/experience" className="navBtn">
-                <strong>Experience</strong>
-              </Link>
-              <Link href="/projects" className="navBtn active">
-                <strong>Projects</strong>
-              </Link>
-              <Link href="/skills" className="navBtn">
-                <strong>Skills</strong>
-              </Link>
-              <Link href="/involvement" className="navBtn">
-                <strong>Involvement</strong>
-              </Link>
-              <Link href="/contact" className="navBtn">
-                <strong>Contact</strong>
-              </Link>
-              <Link href="/terminal" className="navBtn">
-                <strong>Terminal</strong>
-              </Link>
-            </div>
-
-            <div
-              style={{
-                marginTop: "14px",
-                borderRadius: "14px",
-                border: "3px solid var(--green2)",
-                background: "var(--card-bg)",
-                padding: "14px",
-                fontSize: "20px",
-                boxShadow: "0 3px 0 var(--green2)",
-              }}
-            >
-              <div
-                style={{
-                  textAlign: "center",
-                  letterSpacing: ".14em",
-                  marginBottom: "8px",
-                  fontWeight: "bold",
-                }}
-              >
-                Quick Links
-              </div>
-              <div
-                style={{
-                  marginTop: "6px",
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "8px",
-                  justifyContent: "center",
-                }}
-              >
-                <a href="mailto:akrupitsky@ufl.edu">Email ↗</a>
-                <span style={{ opacity: 0.6 }}>·</span>
-                <a
-                  href="https://www.linkedin.com/in/alicekrupitsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn ↗
-                </a>
-                <span style={{ opacity: 0.6 }}>·</span>
-                <a
-                  href="https://github.com/alicekrupitsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub ↗
-                </a>
-              </div>
-            </div>
-          </div>
-        </aside>
+        <Nav currentPath="/projects" />
 
         <main style={{ display: "grid", gap: "22px" }}>
           <section className="window">
@@ -122,8 +55,10 @@ export default function ProjectsPage() {
                       href="https://devpost.com/software/neuroview"
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={projectTitleLinkStyle}
                     >
-                      NeuroView ↗
+                      <span>NeuroView</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
                     </a>
                   </div>
                   <div
@@ -154,7 +89,7 @@ export default function ProjectsPage() {
                         borderBottom: "2px solid var(--ink)",
                       }}
                     >
-                      Visit Site ↗
+                      Visit Site -&gt;
                     </a>
                   </div>
                   <ul>
@@ -190,8 +125,10 @@ export default function ProjectsPage() {
                       href="https://floridamedsearch.com/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={projectTitleLinkStyle}
                     >
-                      Florida Medical Doctor Search ↗
+                      <span>Florida Medical Doctor Search</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
                     </a>
                   </div>
                   <div
@@ -203,7 +140,7 @@ export default function ProjectsPage() {
                       flexWrap: "wrap",
                     }}
                   >
-                    <span>Founder & Developer | Dec 2025 – Jan 2026</span>
+                    <span>Founder &amp; Developer | Dec 2025 - Jan 2026</span>
                     <a
                       href="https://floridamedsearch.com/"
                       target="_blank"
@@ -219,7 +156,7 @@ export default function ProjectsPage() {
                         borderBottom: "2px solid var(--ink)",
                       }}
                     >
-                      Visit Site ↗
+                      Visit Site -&gt;
                     </a>
                   </div>
                   <ul>
@@ -254,8 +191,10 @@ export default function ProjectsPage() {
                       href="https://github.com/alicekrupitsky/Tetris"
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={projectTitleLinkStyle}
                     >
-                      Tetris ↗
+                      <span>Tetris</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
                     </a>
                   </div>
                   <div
@@ -283,7 +222,7 @@ export default function ProjectsPage() {
                         borderBottom: "2px solid var(--ink)",
                       }}
                     >
-                      View on GitHub ↗
+                      View on GitHub -&gt;
                     </a>
                   </div>
                   <ul>
@@ -307,8 +246,10 @@ export default function ProjectsPage() {
                       href="http://www.daviddfriedman.com/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      style={projectTitleLinkStyle}
                     >
-                      Website for David D. Friedman ↗
+                      <span>Website for David D. Friedman</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
                     </a>
                   </div>
                   <div
@@ -336,7 +277,7 @@ export default function ProjectsPage() {
                         borderBottom: "2px solid var(--ink)",
                       }}
                     >
-                      Visit Site ↗
+                      Visit Site -&gt;
                     </a>
                   </div>
                   <ul>
@@ -359,7 +300,7 @@ export default function ProjectsPage() {
                       letterSpacing: ".04em",
                     }}
                   >
-                    Golden Egg Café Instagram Content
+                    Golden Egg Caf&eacute; Instagram Content
                   </div>
                   <div className="meta">
                     Content strategy + Canva design | Ongoing
@@ -370,7 +311,7 @@ export default function ProjectsPage() {
                       strong visual hierarchy and readability
                     </li>
                     <li>
-                      Wrote clear, on-brand copy aligned with the café&apos;s
+                      Wrote clear, on-brand copy aligned with the caf&eacute;&apos;s
                       tone and customer expectations
                     </li>
                     <li>
@@ -384,7 +325,7 @@ export default function ProjectsPage() {
           </section>
 
           <div className="footer">
-            Made with <span className="heart">♥</span> by Alice
+            Made with <span className="heart">&#9829;</span> by Alice
           </div>
         </main>
       </div>

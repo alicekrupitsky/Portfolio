@@ -1,5 +1,6 @@
 "use client";
 
+import Nav from "@/components/nav";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -8,10 +9,13 @@ const SKILLS = [
   "C++",
   "C#",
   "JavaScript",
+  "TypeScript",
   "HTML/CSS",
   "SQL",
   "React",
+  "Next.js",
   "Git & GitHub",
+  "Vercel",
   "Bootstrap",
   "Power BI",
   "Excel",
@@ -296,34 +300,7 @@ export default function SkillsPage() {
       </div>
 
       <div className="grid">
-        <aside className="navWrap">
-          <div className="navCard">
-            <div className="navTitle">NAV</div>
-            <div className="navGrid">
-              <Link href="/" className="navBtn">
-                <strong>About</strong>
-              </Link>
-              <Link href="/experience" className="navBtn">
-                <strong>Experience</strong>
-              </Link>
-              <Link href="/projects" className="navBtn">
-                <strong>Projects</strong>
-              </Link>
-              <Link href="/skills" className="navBtn active">
-                <strong>Skills</strong>
-              </Link>
-              <Link href="/involvement" className="navBtn">
-                <strong>Involvement</strong>
-              </Link>
-              <Link href="/contact" className="navBtn">
-                <strong>Contact</strong>
-              </Link>
-              <Link href="/terminal" className="navBtn">
-                <strong>Terminal</strong>
-              </Link>
-            </div>
-          </div>
-        </aside>
+        <Nav currentPath="/skills" />
 
         <main style={{ display: "grid", gap: 22 }}>
           <SkillsWindow />

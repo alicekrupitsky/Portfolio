@@ -42,15 +42,20 @@ export default function ExperiencePage() {
                       letterSpacing: ".04em",
                     }}
                   >
-                    Web Developer - Swamp Records
+                    Marketing Director - Computing Student Union (CSU)
                   </div>
                   <div className="meta">
-                    Jan 2026 - Present | Gainesville, FL | Part-time
+                    Jan 2026 - Present | Gainesville, FL
                   </div>
                   <ul>
                     <li>
-                      Collaborate with team members to create responsive,
-                      user-friendly web applications
+                     Own CSU marketing strategy, including campaign direction, channels, and content planning.
+                    </li>
+                    <li>
+                      Lead event promotion across Instagram, announcements, and weekly timelines.
+                    </li>
+                    <li>
+                      Coordinate with leadership and event teams to keep messaging and timing aligned.
                     </li>
                   </ul>
                 </div>
@@ -63,25 +68,49 @@ export default function ExperiencePage() {
                       letterSpacing: ".04em",
                     }}
                   >
-                    Associate, Content Specialist - SOLV Digital
+                    Associate - SOLV Digital
                   </div>
                   <div className="meta">
                     Nov 2025 - Present | Gainesville, FL | Part-time
                   </div>
                   <ul>
                     <li>
-                      Develop and execute content strategies informed by
-                      performance metrics, engagement trends, and platform
-                      analytics
+                      Build content strategies from performance data across
+                      reach, engagement, and interaction trends.
                     </li>
                     <li>
-                      Analyze content performance (reach, engagement,
-                      interactions) to refine strategy and improve campaign
-                      effectiveness
+                      Turn weekly analytics into clear campaign decisions on
+                      messaging, format, and publishing cadence.
                     </li>
                     <li>
-                      Collaborate with cross-functional teams to translate
-                      insights into actionable content recommendations
+                      Partner with cross-functional teams to convert insights
+                      into actionable recommendations and higher-performing
+                      content.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="miniCard">
+                  <div
+                    style={{
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Web Developer - Swamp Records
+                  </div>
+                  <div className="meta">
+                    Jan 2026 - Present | Gainesville, FL | Part-time
+                  </div>
+                  <ul>
+                    <li>
+                      Build and ship responsive website updates for artist and
+                      event content.
+                    </li>
+                    <li>
+                      Work with teammates to turn campaign needs into clear user
+                      flows and on-brand page experiences.
                     </li>
                   </ul>
                 </div>
@@ -101,16 +130,16 @@ export default function ExperiencePage() {
                   </div>
                   <ul>
                     <li>
-                      Manage the @golden.eggcafe Instagram and associated
-                      digital platforms
+                      Own the @golden.eggcafe content calendar and campaign
+                      execution across social channels.
                     </li>
                     <li>
-                      Create branded visual content using photography and Canva
-                      to maintain consistent visual identity
+                      Test creative direction, offers, and messaging based on
+                      post performance and audience response.
                     </li>
                     <li>
-                      Increased account reach by 190% through data-informed
-                      content strategy and platform optimization
+                      Grew account reach by 190% through consistent iteration
+                      and data-informed optimization.
                     </li>
                   </ul>
                 </div>
@@ -127,33 +156,13 @@ export default function ExperiencePage() {
                   </div>
                   <div className="meta">May 2022 - Aug 2022 | Tampa, FL</div>
                   <ul>
-                    <li>Provided personalized math tutoring for students K-12</li>
                     <li>
-                      Led an average score improvement of around 30% across
-                      students of all grades
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Server - Sushi Cafe
-                  </div>
-                  <div className="meta">Jul 2021 - Jun 2023 | Tampa, FL</div>
-                  <ul>
-                    <li>
-                      Delivered high-quality service in a fast-paced,
-                      high-volume environment
+                      Delivered personalized tutoring for K-12 students with
+                      different pacing and learning styles.
                     </li>
                     <li>
-                      Built strong conflict-resolution and customer service
-                      skills
+                      Supported an average score improvement of about 30% across
+                      students.
                     </li>
                   </ul>
                 </div>
@@ -171,8 +180,27 @@ export default function ExperiencePage() {
                   <div className="meta">Feb 2024 - May 2024 | Gainesville, FL</div>
                   <ul>
                     <li>
-                      Managed high-volume service while balancing multitasking,
-                      teamwork, and time management
+                      Managed high-volume shifts while balancing speed,
+                      accuracy, and team coordination.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="miniCard">
+                  <div
+                    style={{
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Server - Sushi Cafe
+                  </div>
+                  <div className="meta">Jul 2021 - Jun 2023 | Tampa, FL</div>
+                  <ul>
+                    <li>
+                      Delivered reliable service in a fast-paced setting and
+                      built strong customer communication skills.
                     </li>
                   </ul>
                 </div>

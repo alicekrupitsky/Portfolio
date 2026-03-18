@@ -86,39 +86,56 @@ export default function PortfolioTerminal() {
     experience: () => `
 [EXPERIENCE]
 
+  Jan 2026 - Present | Marketing Director
+  Computing Student Union (CSU) | Gainesville, FL
+  - Own CSU marketing strategy across campaign direction,
+    channels, and content planning
+  - Lead event promotion across Instagram, announcements,
+    and weekly timelines
+  - Coordinate with leadership and event teams to keep
+    messaging and timing aligned
+
+  Nov 2025 - Present | Associate
+  SOLV Digital | Gainesville, FL | Part-time
+  - Build content strategies from performance data across
+    reach, engagement, and interaction trends
+  - Turn weekly analytics into clear campaign decisions on
+    messaging, format, and publishing cadence
+  - Partner with cross-functional teams to convert insights
+    into actionable recommendations
+
   Jan 2026 - Present | Web Developer
   Swamp Records | Gainesville, FL | Part-time
-  - Collaborate with team members to create responsive,
-    user-friendly web applications
-
-  Nov 2025 - Present | Associate, Content Specialist
-  SOLV Digital | Gainesville, FL | Part-time
-  - Develop and execute content strategies informed by performance
-    metrics, engagement trends, and platform analytics
-  - Analyze content performance (reach, engagement, interactions)
-    to refine strategy and improve campaign effectiveness
-  - Collaborate with cross-functional teams to translate insights
-    into actionable content recommendations
+  - Build and ship responsive website updates for artist
+    and event content
+  - Work with teammates to turn campaign needs into
+    clear user flows and on-brand page experiences
 
   Jul 2025 - Present | Social Media and Marketing Manager
   Golden Egg Cafe | Tampa, FL | Part-time
-  - Manage the @golden.eggcafe Instagram and associated platforms
-  - Create branded visual content using photography and Canva
-  - Increased account reach by 190% through data-informed strategy
+  - Own the @golden.eggcafe content calendar and campaign
+    execution across social channels
+  - Test creative direction, offers, and messaging based on
+    post performance and audience response
+  - Grew account reach by 190% through consistent iteration
+    and data-informed optimization
 
   May 2022 - Aug 2022 | Math Tutor
   Mathnasium Learning Center | Tampa, FL
-  - Personalized math tutoring for students K-12
-  - Led an average score improvement of ~30% across all grades
-
-  Jul 2021 - Jun 2023 | Server
-  Sushi Cafe | Tampa, FL
-  - High-quality service in a fast-paced, high-volume environment
-  - Built conflict-resolution and customer service skills
+  - Delivered personalized tutoring for K-12 students with
+    different pacing and learning styles
+  - Supported an average score improvement of about 30%
+    across students
 
   Feb 2024 - May 2024 | Server
   Applebee's | Gainesville, FL
-  - Balanced multitasking, teamwork, and time management
+  - Managed high-volume shifts while balancing speed,
+    accuracy, and team coordination
+
+  Jul 2021 - Jun 2023 | Server
+  Sushi Cafe | Tampa, FL
+  - Delivered reliable service in a fast-paced setting and
+    built strong customer communication skills
 `,
     involvement: () => `
 [CAMPUS INVOLVEMENT]
@@ -134,35 +151,55 @@ export default function PortfolioTerminal() {
   1. NeuroView
      Frontend Lead | SwampHacks XI Winner (Best User Design) | Jan 2026
      https://devpost.com/software/neuroview
-     - Led frontend architecture of a real-time 3D brain MRI viewer
-     - Interactive 3D multi-plane slicing and annotation using Three.js
-     - WebSocket collaboration for up to 4 concurrent live sessions
-     - UI design contributed to Best User Design award at SwampHacks XI
+     - Built the frontend for a real-time 3D MRI viewer that made
+       complex scan review easier and faster
+     - Built synchronized multi-plane slicing, annotation, and shared
+       sessions for up to 4 users
+     - Reduced user friction by making key scan actions faster to learn
+       and easier to repeat
+     - Result: NeuroView won Best User Design at SwampHacks XI
 
   2. Florida Medical Doctor Search
      Founder and Developer | Dec 2025 - Jan 2026
      https://floridamedsearch.com/
-     - Full-stack app to find doctors by real procedural experience
-     - Relational SQL database using large FL healthcare datasets
-     - Advanced search: procedure lookup plus geographic filtering
-     - Stack: C#, SQL, HTML, CSS, JavaScript, Bootstrap
+     - Built and launched a doctor search tool focused on real
+       procedural history, not just ratings
+     - Turned large public healthcare datasets into a clean search
+       experience with filters users can act on
+     - Result: transformed complex medical data into a practical tool
+       for patient decision-making
 
-  3. Tetris
+  3. Museboard Growth and Conversion Analysis
+     Data Analytics | Client work through SOLV Digital (Associate)
+     /projects/museboard-growth-conversion-analysis
+     - Mapped the Instagram-to-platform funnel to show exactly where
+       discovery stopped converting into product usage
+     - Identified profile visit to link click as the key bottleneck,
+       which clarified where growth experiments should focus first
+     - Used trend and KPI analysis to separate one-time spikes from
+       sustained engagement and guide next-step decisions
+
+  4. Golden Egg Cafe Instagram Content
+     Content Strategy + Performance Review | Ongoing
+     https://www.instagram.com/golden.eggcafe/
+     - Used post-level data to plan campaigns around seasonal demand
+       and customer behavior patterns
+     - Tested and iterated on creative formats, messaging, and offer
+       framing to improve response over time
+     - Built a repeatable content system guided by performance metrics
+
+  5. Tetris
      Python + Pygame | Jan 2026
      https://github.com/alicekrupitsky/Tetris
-     - Executable Tetris game with scoring, leveling, wall kicks,
+     - Built an executable Tetris game using Python and Pygame
+     - Features scoring and leveling with increasing speed, wall kicks,
        and pause/restart controls
 
-  4. Website for David D. Friedman
-     Frontend Developer | Mar 2020
+  6. Website for David D. Friedman
+     Frontend Development | Mar 2020
      http://www.daviddfriedman.com/
-     - Designed and deployed personal site for economist David D. Friedman
-     - HTML + CSS; strengthened client communication skills
-
-  5. Golden Egg Cafe Instagram Content
-     Content Strategy + Canva Design | Ongoing
-     - Promotional posts and campaign graphics with strong visual hierarchy
-     - On-brand copy plus performance data to refine content formats
+     - Designed and launched a client website, building early
+       experience in scoped delivery and client communication
 `,
     contact: () => `
 [CONTACT]

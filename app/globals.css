@@ -1136,3 +1136,96 @@ a:hover {
   font-size: 20px;
   font-style: italic;
 }
+
+.featuredBadgeInline {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.realismBtn {
+  position: relative;
+  border: none;
+  border-radius: 16px;
+  cursor: default;
+  pointer-events: auto;
+  font-size: 1rem;
+  padding: 2px;
+  background: radial-gradient(circle 80px at 80% -10%, #fffef2, #caa14c);
+  transition: all 300ms ease;
+}
+
+.realismBtnGlow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 60%;
+  border-radius: 120px;
+  box-shadow: 0 0 20px #ffe9ae88;
+  transition: all 300ms ease-out;
+  z-index: -1;
+}
+
+.group:hover .realismBtnGlow,
+.realismBtn:hover .realismBtnGlow {
+  box-shadow: 0 0 36px #fff2c5cc;
+}
+
+.realismBtnBlob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50%;
+  border-radius: 17px;
+  transition: all 300ms ease-out;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #fff7c8,
+    #ffe28988,
+    transparent
+  );
+  box-shadow: -2px 9px 30px #ffe08a88;
+}
+
+.group:hover .realismBtnBlob,
+.realismBtn:hover .realismBtnBlob {
+  width: 82px;
+  box-shadow: -4px 1px 38px #ffe5aacc;
+}
+
+.realismBtnInner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 8px 14px;
+  color: #fffdf0;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+  font-size: 16px;
+  background: radial-gradient(circle 80px at 80% -50%, #f9e7a8, #b3832f);
+  text-shadow: 0 0 8px rgba(255, 248, 206, 0.65);
+  transition: all 300ms ease;
+}
+
+.group:hover .realismBtnInner,
+.realismBtn:hover .realismBtnInner {
+  transform: scale(1.05);
+}
+
+.realismBtnInnerGlow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 14px;
+  background: radial-gradient(
+    circle 60px at 0% 100%,
+    #fff4be33,
+    #ffd76a22,
+    transparent
+  );
+}

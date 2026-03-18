@@ -187,6 +187,104 @@ export default function ProjectsPage() {
                       letterSpacing: ".04em",
                     }}
                   >
+                    <Link
+                      href="/projects/museboard-growth-conversion-analysis"
+                      style={projectTitleLinkStyle}
+                    >
+                      <span>Museboard Growth &amp; Conversion Analysis</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
+                    </Link>
+                  </div>
+                  <div
+                    className="meta"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: "10px",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <span>
+                      Data Analytics | Power BI, Funnel Analysis, KPI Tracking
+                    </span>
+                    <Link
+                      href="/projects/museboard-growth-conversion-analysis"
+                      style={{
+                        border: "2px solid var(--ink)",
+                        borderRadius: "10px",
+                        padding: "3px 10px",
+                        background: "var(--bg)",
+                        boxShadow: "0 2px 0 var(--green2)",
+                        whiteSpace: "nowrap",
+                        fontSize: "19px",
+                        borderBottom: "2px solid var(--ink)",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "6px",
+                      }}
+                    >
+                      <span>View Case Study</span>
+                      <ArrowUpRight size={20} strokeWidth={2.4} />
+                    </Link>
+                  </div>
+                  <ul>
+                    <li>
+                      Analyzed Instagram acquisition and platform engagement data
+                      to identify user drop-off points and uncover conversion
+                      bottlenecks
+                    </li>
+                    <li>
+                      Connected funnel performance and trend analysis to clear,
+                      actionable business insights
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="miniCard">
+                  <div
+                    style={{
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    <a
+                      href="https://www.instagram.com/golden.eggcafe/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={projectTitleLinkStyle}
+                    >
+                      <span>Golden Egg Caf&eacute; Instagram Content</span>
+                      <ArrowUpRight size={24} strokeWidth={2.4} />
+                    </a>
+                  </div>
+                  <div className="meta">
+                    Content strategy + Canva design | Ongoing
+                  </div>
+                  <ul>
+                    <li>
+                      Designed promotional posts and campaign graphics with
+                      strong visual hierarchy and readability
+                    </li>
+                    <li>
+                      Wrote clear, on-brand copy aligned with the caf&eacute;&apos;s
+                      tone and customer expectations
+                    </li>
+                    <li>
+                      Used performance data to refine what content formats and
+                      messages work best
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="miniCard">
+                  <div
+                    style={{
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      letterSpacing: ".04em",
+                    }}
+                  >
                     <a
                       href="https://github.com/alicekrupitsky/Tetris"
                       target="_blank"
@@ -288,35 +386,6 @@ export default function ProjectsPage() {
                     <li>
                       Strengthened independent problem-solving and client
                       communication skills
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Golden Egg Caf&eacute; Instagram Content
-                  </div>
-                  <div className="meta">
-                    Content strategy + Canva design | Ongoing
-                  </div>
-                  <ul>
-                    <li>
-                      Designed promotional posts and campaign graphics with
-                      strong visual hierarchy and readability
-                    </li>
-                    <li>
-                      Wrote clear, on-brand copy aligned with the caf&eacute;&apos;s
-                      tone and customer expectations
-                    </li>
-                    <li>
-                      Used performance data to refine what content formats and
-                      messages work best
                     </li>
                   </ul>
                 </div>

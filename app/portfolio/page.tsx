@@ -1,88 +1,80 @@
 "use client";
 
-import Nav from "@/components/nav";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+/* eslint-disable @next/next/no-img-element */
 
-type Post = {
+import Link from "next/link";
+import { useState } from "react";
+import Nav from "@/components/nav";
+
+type PortfolioImage = {
   src: string;
   alt: string;
-  date: string;
+  caption: string;
 };
 
-const csuPosts: Post[] = [
-  { src: "/csu-1.jpg", alt: "CSU post", date: "Jan 2026" },
-  { src: "/csu-2.jpg", alt: "CSU post", date: "Jan 2026" },
-  { src: "/csu-3.jpg", alt: "CSU post", date: "Feb 2026" },
-  { src: "/csu-4.jpg", alt: "CSU post", date: "Feb 2026" },
+type PortfolioSection = {
+  title: string;
+  handle: string;
+  summary: string;
+  role: string;
+  images: PortfolioImage[];
+};
+
+const sections: PortfolioSection[] = [
+  {
+    title: "Computing Student Union",
+    handle: "@ufcsu",
+    summary:
+      "Social graphics and event content built to promote meetings, spotlight community activity, and keep the organization visually consistent across posts.",
+    role: "Content Design + Social Media Graphics",
+    images: [
+      {
+        src: "/CSUGBMone.png",
+        alt: "Computing Student Union general body meeting graphic",
+        caption: "General Body Meeting",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+        alt: "Students collaborating for a CSU-style community post",
+        caption: "Community Highlight",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200",
+        alt: "Laptop and event materials for a CSU event graphic",
+        caption: "Event Promotion",
+      },
+    ],
+  },
+  {
+    title: "Golden Egg Cafe",
+    handle: "@golden.eggcafe",
+    summary:
+      "Promotional content focused on menu storytelling, seasonal campaigns, and bright lifestyle imagery that fits the cafe's casual, friendly brand.",
+    role: "Content Strategy + Promotional Design",
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&q=80&w=1200",
+        alt: "Breakfast plate for Golden Egg Cafe menu feature",
+        caption: "Menu Feature",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1200",
+        alt: "Brunch photo for Golden Egg Cafe special promotion",
+        caption: "Brunch Special",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
+        alt: "Cafe interior and food for promotional content",
+        caption: "Cafe Campaign",
+      },
+    ],
+  },
 ];
-
-const gePosts: Post[] = [
-  { src: "/ge-1.jpg", alt: "Golden Egg post", date: "Jul 2025" },
-  { src: "/ge-2.jpg", alt: "Golden Egg post", date: "Aug 2025" },
-  { src: "/ge-3.jpg", alt: "Golden Egg post", date: "Sep 2025" },
-  { src: "/ge-4.jpg", alt: "Golden Egg post", date: "Oct 2025" },
-];
-
-function PortfolioPost({
-  post,
-  onOpen,
-}: {
-  post: Post;
-  onOpen: (post: Post) => void;
-}) {
-  const [failed, setFailed] = useState(false);
-
-  return (
-    <div className="postCard" onClick={() => !failed && onOpen(post)}>
-      <div className="postImgWrap">
-        {!failed ? (
-          <img
-            className="postImg"
-            src={post.src}
-            alt={post.alt}
-            onError={() => setFailed(true)}
-          />
-        ) : (
-          <div className="postPlaceholder">
-            <div className="icon">[image]</div>
-            <div>
-              Replace src with
-              <br />
-              your image file
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="postMeta">{post.date}</div>
-    </div>
-  );
-}
 
 export default function PortfolioPage() {
-  const [lightboxPost, setLightboxPost] = useState<Post | null>(null);
+  const [activeImage, setActiveImage] = useState<PortfolioImage | null>(null);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setLightboxPost(null);
-        document.body.style.overflow = "";
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
-
-  const openLightbox = (post: Post) => {
-    setLightboxPost(post);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeLightbox = () => {
-    setLightboxPost(null);
-    document.body.style.overflow = "";
-  };
+  const closeLightbox = () => setActiveImage(null);
 
   return (
     <>
@@ -114,33 +106,43 @@ export default function PortfolioPage() {
               </div>
 
               <div className="windowBody">
-                <div className="brandHeader">
-                  <div className="brandLabel">Computing Student Union</div>
-                  <div className="brandHandle">@ufcsu</div>
-                </div>
-                <hr className="brandDivider" />
-                <div className="postGrid">
-                  {csuPosts.map((post, index) => (
-                    <PortfolioPost
-                      key={`csu-${index}`}
-                      post={post}
-                      onOpen={openLightbox}
-                    />
-                  ))}
-                </div>
+                <p>
+                  A simple gallery of the brand work I have created for Computing
+                  Student Union and Golden Egg Cafe.
+                </p>
 
-                <div className="brandHeader sectionGap">
-                  <div className="brandLabel">Golden Egg Caf&eacute;</div>
-                  <div className="brandHandle">@golden.eggcafe</div>
-                </div>
-                <hr className="brandDivider" />
-                <div className="postGrid">
-                  {gePosts.map((post, index) => (
-                    <PortfolioPost
-                      key={`ge-${index}`}
-                      post={post}
-                      onOpen={openLightbox}
-                    />
+                <div className="cardList" style={{ marginTop: "18px" }}>
+                  {sections.map((section) => (
+                    <article key={section.title} className="miniCard">
+                      <div className="brandHeader" style={{ marginBottom: "10px" }}>
+                        <div className="brandLabel">{section.title}</div>
+                        <div className="brandHandle">{section.handle}</div>
+                      </div>
+                      <div className="meta">{section.role}</div>
+                      <p style={{ marginBottom: "18px" }}>{section.summary}</p>
+
+                      <div className="postGrid">
+                        {section.images.map((image) => (
+                          <button
+                            key={image.src}
+                            type="button"
+                            className="postCard"
+                            onClick={() => setActiveImage(image)}
+                            style={{
+                              padding: 0,
+                              font: "inherit",
+                              color: "inherit",
+                              textAlign: "left",
+                            }}
+                          >
+                            <div className="postImgWrap">
+                              <img className="postImg" src={image.src} alt={image.alt} />
+                            </div>
+                            <div className="postMeta">{image.caption}</div>
+                          </button>
+                        ))}
+                      </div>
+                    </article>
                   ))}
                 </div>
               </div>
@@ -153,30 +155,24 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      {lightboxPost && (
+      {activeImage ? (
         <div
           className="lightbox open"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) closeLightbox();
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              closeLightbox();
+            }
           }}
         >
           <div className="lightboxInner">
-            <button
-              type="button"
-              className="lightboxClose"
-              onClick={closeLightbox}
-            >
+            <button type="button" className="lightboxClose" onClick={closeLightbox}>
               x
             </button>
-            <img
-              className="lightboxImg"
-              src={lightboxPost.src}
-              alt={lightboxPost.alt}
-            />
-            <div className="lightboxDate">{lightboxPost.date}</div>
+            <img className="lightboxImg" src={activeImage.src} alt={activeImage.alt} />
+            <div className="lightboxDate">{activeImage.caption}</div>
           </div>
         </div>
-      )}
+      ) : null}
     </>
   );
 }

@@ -1,9 +1,106 @@
+"use client";
+
 import Nav from "@/components/nav";
+import Timeline3D, { type TimelineEvent } from "@/components/ui/3d-interactive-timeline";
 import SiteNameLink from "@/components/ui/site-name-link";
+import {
+  BriefcaseBusiness,
+  Building2,
+  Code2,
+  Megaphone,
+  Presentation,
+  School,
+} from "lucide-react";
 
 export default function ExperiencePage() {
+  const timelineEvents: TimelineEvent[] = [
+    {
+      id: "csu",
+      date: "Jan 2026 – Present",
+      title: "Marketing Director - Computing Student Union (CSU)",
+      description: "",
+      icon: <Megaphone className="h-5 w-5" />,
+      category: "Leadership",
+      color: "#79a15d",
+      location: "Gainesville, FL",
+      bullets: [
+        "Lead event promotion across Instagram, announcements, and weekly timelines.",
+        "Coordinate with leadership and event teams to keep messaging and timing aligned.",
+      ],
+    },
+    {
+      id: "swamp-records",
+      date: "Jan 2026 – Present",
+      title: "Web Developer - Swamp Records",
+      description: "",
+      icon: <Code2 className="h-5 w-5" />,
+      category: "Development",
+      color: "#9670aa",
+      location: "Gainesville, FL | Part-time",
+      bullets: [
+        "Build and maintain artist-facing web features using React, Next.js, and TypeScript, deployed via Vercel.",
+        "Partner with teammates to translate requirements into usable UI, balancing design, accessibility, and performance.",
+      ],
+    },
+    {
+      id: "solv",
+      date: "Nov 2025 – Present",
+      title: "Associate Content Specialist - SOLV Digital",
+      description: "",
+      icon: <Presentation className="h-5 w-5" />,
+      category: "Analytics",
+      color: "#5c93bd",
+      location: "Gainesville, FL | Part-time",
+      bullets: [
+        "Analyze engagement metrics and user behavior data to optimize content strategy across digital platforms.",
+        "Translate insights into recommendations with cross-functional teams; communicate results clearly to stakeholders.",
+      ],
+    },
+    {
+      id: "golden-egg",
+      date: "Jul 2025 – Present",
+      title: "Social Media & Marketing Manager - Golden Egg Café",
+      description: "",
+      icon: <Building2 className="h-5 w-5" />,
+      category: "Brand Growth",
+      color: "#db8078",
+      location: "Tampa, FL | Part-time",
+      bullets: [
+        "Increased account reach by 190% through data-informed content strategy and platform optimization.",
+        "Designed branded visual content using photography and Canva to maintain consistent visual identity.",
+      ],
+    },
+    {
+      id: "mathnasium",
+      date: "May 2022 – Aug 2022",
+      title: "Math Tutor - Mathnasium Learning Center",
+      description: "",
+      icon: <School className="h-5 w-5" />,
+      category: "Education",
+      color: "#e7c87a",
+      location: "Tampa, FL",
+      bullets: [
+        "Delivered personalized tutoring for K–12 students across different pacing and learning styles.",
+        "Supported an average score improvement of ~30% across students.",
+      ],
+    },
+    {
+      id: "sushi-cafe",
+      date: "Jul 2021 – Jun 2023",
+      title: "Server - Sushi Cafe",
+      description: "",
+      icon: <BriefcaseBusiness className="h-5 w-5" />,
+      category: "Customer Experience",
+      color: "#587645",
+      location: "Tampa, FL",
+      bullets: [
+        "Delivered high-quality service in a fast-paced, high-volume environment and built strong conflict-resolution skills.",
+      ],
+    },
+  ];
+
   return (
-    <div className="page">
+    <div className="page experiencePage">
       <div className="headerWindow">
         <div className="headerTop">
           <div className="dots">
@@ -19,11 +116,11 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      <div className="grid">
+      <div className="grid experienceGrid">
         <Nav currentPath="/experience" />
 
         <main style={{ display: "grid", gap: "22px" }}>
-          <section className="window">
+          <section className="window experienceWindow">
             <div className="windowTop">
               <div className="windowTopLeft">
                 <div className="dots" style={{ paddingTop: 0 }}>
@@ -35,179 +132,11 @@ export default function ExperiencePage() {
               </div>
             </div>
 
-            <div className="windowBody">
-              <div className="cardList">
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Marketing Director - Computing Student Union (CSU)
-                  </div>
-                  <div className="meta">
-                    Jan 2026 - Present | Gainesville, FL
-                  </div>
-                  <ul>
-                    <li>
-                     Own CSU marketing strategy, including campaign direction, channels, and content planning.
-                    </li>
-                    <li>
-                      Lead event promotion across Instagram, announcements, and weekly timelines.
-                    </li>
-                    <li>
-                      Coordinate with leadership and event teams to keep messaging and timing aligned.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Associate - SOLV Digital
-                  </div>
-                  <div className="meta">
-                    Nov 2025 - Present | Gainesville, FL | Part-time
-                  </div>
-                  <ul>
-                    <li>
-                      Build content strategies from performance data across
-                      reach, engagement, and interaction trends.
-                    </li>
-                    <li>
-                      Turn weekly analytics into clear campaign decisions on
-                      messaging, format, and publishing cadence.
-                    </li>
-                    <li>
-                      Partner with cross-functional teams to convert insights
-                      into actionable recommendations and higher-performing
-                      content.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Web Developer - Swamp Records
-                  </div>
-                  <div className="meta">
-                    Jan 2026 - Present | Gainesville, FL | Part-time
-                  </div>
-                  <ul>
-                    <li>
-                      Build and ship responsive website updates for artist and
-                      event content.
-                    </li>
-                    <li>
-                      Work with teammates to turn campaign needs into clear user
-                      flows and on-brand page experiences.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Social Media & Marketing Manager - Golden Egg Caf&eacute;
-                  </div>
-                  <div className="meta">
-                    Jul 2025 - Present | Tampa, FL | Part-time
-                  </div>
-                  <ul>
-                    <li>
-                      Own the @golden.eggcafe content calendar and campaign
-                      execution across social channels.
-                    </li>
-                    <li>
-                      Test creative direction, offers, and messaging based on
-                      post performance and audience response.
-                    </li>
-                    <li>
-                      Grew account reach by 190% through consistent iteration
-                      and data-informed optimization.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Math Tutor - Mathnasium Learning Center
-                  </div>
-                  <div className="meta">May 2022 - Aug 2022 | Tampa, FL</div>
-                  <ul>
-                    <li>
-                      Delivered personalized tutoring for K-12 students with
-                      different pacing and learning styles.
-                    </li>
-                    <li>
-                      Supported an average score improvement of about 30% across
-                      students.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Server - Applebee&apos;s
-                  </div>
-                  <div className="meta">Feb 2024 - May 2024 | Gainesville, FL</div>
-                  <ul>
-                    <li>
-                      Managed high-volume shifts while balancing speed,
-                      accuracy, and team coordination.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="miniCard">
-                  <div
-                    style={{
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      letterSpacing: ".04em",
-                    }}
-                  >
-                    Server - Sushi Cafe
-                  </div>
-                  <div className="meta">Jul 2021 - Jun 2023 | Tampa, FL</div>
-                  <ul>
-                    <li>
-                      Delivered reliable service in a fast-paced setting and
-                      built strong customer communication skills.
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="windowBody experienceWindowBody">
+              <Timeline3D
+                events={timelineEvents}
+                
+              />
             </div>
           </section>
 
@@ -219,10 +148,5 @@ export default function ExperiencePage() {
     </div>
   );
 }
-
-
-
-
-
 
 

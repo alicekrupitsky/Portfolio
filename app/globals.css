@@ -178,11 +178,19 @@ a:hover {
   padding: 42px 16px 48px;
 }
 
+.experiencePage {
+  max-width: 1320px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 18px;
   margin-top: 22px;
+}
+
+.experienceGrid {
+  grid-template-columns: 220px minmax(0, 1fr);
 }
 
 @media (max-width: 900px) {
@@ -488,11 +496,22 @@ a:hover {
 
 .windowTopLeft {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: 27px;
   letter-spacing: .08em;
-  line-height: 1;
+  line-height: 0.9;
+}
+
+.windowTopLeft .dots {
+  align-self: flex-start;
+  margin-top: 1px;
+}
+
+.windowTopLeft > strong,
+.windowTopLeft > span {
+  display: inline-block;
+  padding-top: 1px;
 }
 
 .windowBody {
@@ -500,6 +519,10 @@ a:hover {
   font-size: 23px;
   line-height: 1.5;
   letter-spacing: .02em;
+}
+
+.experienceWindowBody {
+  padding: 18px 18px 22px;
 }
 
 .windowBody p {
@@ -697,6 +720,277 @@ a:hover {
 .miniCard:hover {
   transform: translateY(-2px);
   box-shadow: var(--ui-panel-shadow-hover);
+}
+
+.experienceTimeline {
+  position: relative;
+}
+
+.experienceTimelineIntro {
+  margin-bottom: 18px;
+}
+
+.experienceTimelineEyebrow {
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 6px;
+}
+
+.experienceTimelineTitle {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1;
+  color: var(--green2);
+  max-width: 24ch;
+}
+
+.experienceTimelineSubtitle {
+  margin: 8px 0 0;
+  max-width: 68ch;
+  line-height: 1.35;
+  font-size: 21px;
+}
+
+.experienceTimelineList {
+  position: relative;
+  display: grid;
+  gap: 16px;
+}
+
+.experienceTimelineRail {
+  position: absolute;
+  top: 34px;
+  bottom: 0;
+  left: 24px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--green), var(--accent), var(--green2));
+  box-shadow: 0 0 10px var(--color-primary-shadow-strong);
+}
+
+.experienceTimelineItem {
+  position: relative;
+  padding-left: 56px;
+  min-width: 0;
+}
+
+.experienceTimelineNodeWrap {
+  position: absolute;
+  left: 8px;
+  top: 30px;
+  width: 0;
+  height: 16px;
+  z-index: 2;
+}
+
+.experienceTimelineDateBadge {
+  position: absolute;
+  top: -7px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 12px;
+  border: 2px solid var(--green2);
+  border-radius: 8px;
+  background: var(--soft);
+  box-shadow: 0 2px 0 var(--green2);
+  color: var(--green2);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.experienceTimelineDateBadge.is-left {
+  right: 14px;
+}
+
+.experienceTimelineDateBadge.is-right {
+  left: 14px;
+}
+
+.experienceTimelineNode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 3px solid var(--ink);
+  box-shadow: 0 0 0 2px var(--soft);
+  transform: translateX(-50%);
+}
+
+.experienceTimelineCard {
+  border: 3px solid var(--green2);
+  border-radius: var(--ui-panel-radius);
+  background: var(--card-bg);
+  overflow: hidden;
+  box-shadow: var(--ui-panel-shadow);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.experienceTimelineItem:hover .experienceTimelineCard {
+  transform: translateY(-3px);
+  box-shadow: var(--ui-panel-shadow-hover);
+}
+
+.experienceTimelineCardTop {
+  min-height: 44px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--green2);
+  color: var(--color-text-inverse);
+  border-bottom: 2px solid var(--color-window-divider);
+}
+
+
+.experienceTimelineCardBody {
+  padding: 8px 18px 18px;
+}
+
+.experienceTimelineCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.experienceTimelineRole {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--ink);
+  max-width: 24ch;
+  overflow-wrap: anywhere;
+}
+
+.experienceTimelineMeta {
+  margin-top: 4px;
+  opacity: 0.75;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.experienceTimelineDescription {
+  margin: 10px 0 0;
+  line-height: 1.4;
+  font-size: 20px;
+}
+
+.experienceTimelineBullets {
+  margin: 10px 0 0;
+  padding-left: 22px;
+  line-height: 1.4;
+  font-size: 20px;
+}
+
+.experienceTimelineBullets li {
+  margin-bottom: 5px;
+}
+
+.experienceTimelineThumb {
+  width: 120px;
+  height: 84px;
+  flex: 0 0 120px;
+  border: 2px solid var(--green2);
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 0 var(--green2);
+}
+
+.experienceTimelineLink {
+  display: inline-block;
+  margin-top: 12px;
+  border: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 7px 12px;
+  background: var(--soft);
+  color: var(--green2);
+  box-shadow: 0 2px 0 var(--green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.experienceTimelineLink:hover {
+  color: var(--green2);
+  border-bottom-color: var(--green);
+  background: var(--bg);
+}
+
+@media (min-width: 900px) {
+  .experiencePage .headerWindow {
+    max-width: 980px;
+  }
+
+  .experienceTimelineRail {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .experienceTimelineItem {
+    width: calc(50% - 34px);
+    padding-left: 0;
+  }
+
+  .experienceTimelineItem.is-left {
+    margin-right: auto;
+  }
+
+  .experienceTimelineItem.is-right {
+    margin-left: auto;
+  }
+
+  .experienceTimelineItem.is-left .experienceTimelineNodeWrap {
+    right: -34px;
+    left: auto;
+  }
+
+  .experienceTimelineItem.is-right .experienceTimelineNodeWrap {
+    left: -34px;
+  }
+}
+
+@media (max-width: 700px) {
+  .experienceTimelineTitle {
+    font-size: 34px;
+    max-width: none;
+  }
+
+  .experienceTimelineCardTop {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .experienceTimelineNodeWrap {
+    left: 16px;
+    top: 24px;
+  }
+
+  .experienceTimelineDateBadge {
+    position: absolute;
+    left: 14px;
+    right: auto;
+    font-size: 15px;
+    padding: 4px 10px;
+  }
+
+  .experienceTimelineDateBadge.is-left,
+  .experienceTimelineDateBadge.is-right {
+    left: 14px;
+    right: auto;
+  }
+
+  .experienceTimelineCardHeader {
+    flex-direction: column;
+  }
 }
 
 .badge {

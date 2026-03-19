@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useTheme } from '@/context/ThemeContext'
 
 type HistoryEntry = {
   command: string
@@ -21,6 +22,7 @@ const WELCOME_BANNER = [
 ].join("\n")
 
 export default function PortfolioTerminal() {
+  const { setTheme } = useTheme()
   const [history, setHistory] = useState<HistoryEntry[]>([
     { command: "/welcome", output: WELCOME_BANNER },
   ])
@@ -211,6 +213,15 @@ export default function PortfolioTerminal() {
   Feel free to reach out for opportunities, collaborations, or just a chat!
 `,
     hi: () => `Hi! :D`,
+    boo: () => {
+      setTheme("bloodmoon")
+      return `
+[EASTER EGG UNLOCKED]
+
+  Bloodmoon mode enabled.
+  Something spooky just happened to the palette.
+`
+    },
     badabingbadaboom: () => `...
 WINNER DETECTED.
 Game over. You beat the portfolio.`,

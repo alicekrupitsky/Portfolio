@@ -1,5 +1,6 @@
 import Nav from "@/components/nav";
 import SiteNameLink from "@/components/ui/site-name-link";
+import GoGators from "@/app/GoGators.png";
 
 export default function InvolvementPage() {
   return (
@@ -35,24 +36,41 @@ export default function InvolvementPage() {
               </div>
             </div>
 
-            <div className="windowBody" style={{ padding: "16px 22px 18px" }}>
-              <ul
-                style={{
-                  fontSize: "21px",
-                  lineHeight: "1.35",
-                  paddingLeft: "24px",
-                  margin: 0,
-                }}
-              >
-                <li style={{ marginBottom: "9px" }}>
-                  Computing Student Union (CSU) - <strong>Marketing Director</strong>
-                </li>
-                <li style={{ marginBottom: "9px" }}>WiNGHacks - Volunteer</li>
-                <li style={{ marginBottom: "9px" }}>
-                  Data Science &amp; Informatics (DSI) Student Organization - Member
-                </li>
-                <li style={{ marginBottom: "9px" }}>UF Girls Who Code - Member</li>
-              </ul>
+            <div className="windowBody" style={{ padding: "16px 22px 12px" }}>
+              <div className="involvementContentRow">
+                <ul className="involvementList">
+                  <li>
+                    Computing Student Union (CSU) - <strong>Marketing Director</strong>
+                  </li>
+                  <li>WiNGHacks - Volunteer</li>
+                  <li>UF Data Science &amp; Informatics (DSI) Student Organization - Member</li>
+                  <li>UF Girls Who Code - Member</li>
+                </ul>
+
+                <div className="involvementPhotoWrap">
+                  <div className="aboutPhotoWindow">
+                    <div className="aboutPhotoTop">
+                      <div className="aboutPhotoTopLeft">
+                        <div className="dots aboutPhotoDots">
+                          <div className="dot red"></div>
+                          <div className="dot yellow"></div>
+                          <div className="dot green"></div>
+                        </div>
+                        <span>go_gators.jpg</span>
+                      </div>
+                    </div>
+                    <div className="aboutPhotoBody">
+                      <div className="aboutPhotoFrame">
+                        <img
+                          src={GoGators.src}
+                          alt="Go Gators"
+                          className="aboutPhotoImg involvementPhotoImg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -64,7 +82,6 @@ export default function InvolvementPage() {
     </div>
   );
 }
-
 
 
 

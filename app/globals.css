@@ -239,6 +239,11 @@ a:hover {
   align-self: center;
 }
 
+.headerTop > .dots {
+  align-self: flex-start;
+  margin-top: 1px;
+}
+
 .dot {
   width: 13px;
   height: 13px;
@@ -595,6 +600,40 @@ a:hover {
     inset -1px -1px 0 var(--color-window-divider);
 }
 
+.involvementPhotoWrap {
+  flex: 0 0 236px;
+  width: 236px;
+  margin: 0;
+  align-self: center;
+}
+
+.involvementPhotoImg {
+  max-width: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: var(--color-text-inverse);
+}
+
+.involvementContentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.involvementList {
+  flex: 1;
+  min-width: 0;
+  font-size: 21px;
+  line-height: 1.35;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.involvementList li {
+  margin-bottom: 9px;
+}
+
 @media (max-width: 768px) {
   .aboutPhotoWrap {
     float: none;
@@ -604,6 +643,14 @@ a:hover {
 
   .aboutPhotoWindow {
     max-width: 236px;
+  }
+
+  .involvementContentRow {
+    display: block;
+  }
+
+  .involvementPhotoWrap {
+    margin: 0 auto 1rem;
   }
 }
 

@@ -210,6 +210,10 @@ export default function PortfolioTerminal() {
 
   Feel free to reach out for opportunities, collaborations, or just a chat!
 `,
+    hi: () => `Hi! :D`,
+    badabingbadaboom: () => `...
+WINNER DETECTED.
+Game over. You beat the portfolio.`,
     clear: () => {
       setHistory([])
       return ""

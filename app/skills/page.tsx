@@ -25,7 +25,7 @@ const SKILLS = [
   "Digital Marketing",
   "Adobe Creative Suite",
   "Canva",
-  "Russian (conversational)",
+  "Russian",
 ];
 
 const CERTIFICATIONS = [

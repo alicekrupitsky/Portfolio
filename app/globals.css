@@ -764,10 +764,16 @@ a:hover {
   top: 34px;
   bottom: 0;
   left: 24px;
-  width: 4px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--green), var(--accent), var(--green2));
-  box-shadow: 0 0 10px var(--color-primary-shadow-strong);
+  width: 8px;
+  border-radius: 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--green2) 0 2px,
+      var(--accent) 2px 6px,
+      var(--green2) 6px 8px
+    );
+  box-shadow: 2px 0 0 var(--color-primary-shadow-soft);
 }
 
 .experienceTimelineItem {
@@ -781,46 +787,49 @@ a:hover {
   left: 8px;
   top: 30px;
   width: 0;
-  height: 16px;
+  height: 22px;
   z-index: 2;
 }
 
 .experienceTimelineDateBadge {
   position: absolute;
-  top: -7px;
+  top: -10px;
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  padding: 4px 12px;
+  min-height: 32px;
+  padding: 3px 14px;
   border: 2px solid var(--green2);
-  border-radius: 8px;
+  border-radius: 0;
   background: var(--soft);
-  box-shadow: 0 2px 0 var(--green2);
+  box-shadow:
+    3px 3px 0 var(--green2),
+    inset 0 1px 0 var(--color-button-inset);
   color: var(--green2);
   font-size: 17px;
   font-weight: bold;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
 }
 
 .experienceTimelineDateBadge.is-left {
-  right: 14px;
+  right: 24px;
 }
 
 .experienceTimelineDateBadge.is-right {
-  left: 14px;
+  left: 24px;
 }
 
 .experienceTimelineNode {
   position: absolute;
   top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  border: 3px solid var(--ink);
-  box-shadow: 0 0 0 2px var(--soft);
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  border: 2px solid var(--ink);
+  box-shadow:
+    4px 4px 0 var(--color-primary-shadow-soft);
   transform: translateX(-50%);
 }
 
@@ -971,7 +980,7 @@ a:hover {
 
   .experienceTimelineNodeWrap {
     left: 16px;
-    top: 24px;
+    top: 28px;
   }
 
   .experienceTimelineDateBadge {

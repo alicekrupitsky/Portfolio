@@ -22,17 +22,22 @@ export default function ProjectsPage() {
     whiteSpace: "nowrap",
     fontSize: "19px",
     borderBottom: "2px solid var(--ink)",
-    marginLeft: "auto",
     display: "inline-flex",
     alignItems: "center",
     gap: "6px",
   } as const;
 
   const cardMetaRowStyle = {
-    display: "flex",
-    justifyContent: "space-between",
+    display: "grid",
+    gridTemplateColumns: "minmax(0, 1fr) auto",
+    alignItems: "start",
+    columnGap: "10px",
     gap: "10px",
-    flexWrap: "wrap",
+  } as const;
+
+  const cardMetaTextStyle = {
+    flex: "1 1 auto",
+    minWidth: 0,
   } as const;
 
   return (
@@ -59,6 +64,11 @@ export default function ProjectsPage() {
           <section className="window">
             <div className="windowTop">
               <div className="windowTopLeft">
+                <div className="dots" style={{ paddingTop: 0 }}>
+                  <div className="dot red"></div>
+                  <div className="dot yellow"></div>
+                  <div className="dot green"></div>
+                </div>
                 <strong>Projects</strong>
               </div>
             </div>
@@ -87,9 +97,9 @@ export default function ProjectsPage() {
                     />
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Frontend Lead | SwampHacks XI Winner (Best User Design) | Jan 2026</span>
+                    <span style={cardMetaTextStyle}>Frontend Lead | SwampHacks XI Winner (Best User Design) | Jan&nbsp;2026</span>
                     <a href="https://devpost.com/software/neuroview" target="_blank" rel="noopener noreferrer" style={actionLinkStyle}>
-                      <span>Visit Site</span>
+                      <span>Visit Devpost</span>
                       <ArrowUpRight size={20} strokeWidth={2.4} />
                     </a>
                   </div>
@@ -124,7 +134,7 @@ export default function ProjectsPage() {
                     />
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Founder &amp; Developer | Dec 2025 - Jan 2026</span>
+                    <span style={cardMetaTextStyle}>Founder &amp; Developer | Dec&nbsp;2025 - Jan&nbsp;2026</span>
                     <a href="https://floridamedsearch.com/" target="_blank" rel="noopener noreferrer" style={actionLinkStyle}>
                       <span>Visit Site</span>
                       <ArrowUpRight size={20} strokeWidth={2.4} />
@@ -153,7 +163,7 @@ export default function ProjectsPage() {
                     </Link>
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Data Analytics | Client work through SOLV Digital</span>
+                    <span style={cardMetaTextStyle}>Data Analytics | Client work through SOLV Digital</span>
                     <Link
                       href="/projects/museboard-growth-conversion-analysis"
                       style={{ ...actionLinkStyle, display: "inline-flex", alignItems: "center", gap: "6px" }}
@@ -187,7 +197,7 @@ export default function ProjectsPage() {
                     </a>
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Content Strategy + Performance Review | Ongoing</span>
+                    <span style={cardMetaTextStyle}>Content Strategy + Performance Review | Ongoing</span>
                     <a
                       href="https://www.instagram.com/golden.eggcafe/"
                       target="_blank"
@@ -223,7 +233,7 @@ export default function ProjectsPage() {
                     </a>
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Python + Pygame | Jan 2026</span>
+                    <span style={cardMetaTextStyle}>Python + Pygame | Jan&nbsp;2026</span>
                     <a href="https://github.com/alicekrupitsky/Tetris" target="_blank" rel="noopener noreferrer" style={actionLinkStyle}>
                       <span>View on GitHub</span>
                       <ArrowUpRight size={20} strokeWidth={2.4} />
@@ -252,7 +262,7 @@ export default function ProjectsPage() {
                     </a>
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Frontend Development | Mar 2020</span>
+                    <span style={cardMetaTextStyle}>Frontend Development | Mar&nbsp;2020</span>
                     <a href="http://www.daviddfriedman.com/" target="_blank" rel="noopener noreferrer" style={actionLinkStyle}>
                       <span>Visit Site</span>
                       <ArrowUpRight size={20} strokeWidth={2.4} />

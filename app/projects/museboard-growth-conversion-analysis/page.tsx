@@ -34,6 +34,20 @@ const keyInsights = [
 ];
 
 export default function MuseboardGrowthConversionPage() {
+  const backLinkStyle = {
+    color: "var(--color-text-inverse)",
+    borderBottom: "none",
+    border: "2px solid rgba(255, 255, 255, 0.7)",
+    borderRadius: "10px",
+    padding: "3px 10px",
+    fontSize: "18px",
+    background: "rgba(255, 255, 255, 0.12)",
+    boxShadow: "inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+    display: "inline-flex",
+    alignItems: "center",
+    lineHeight: 1,
+  } as const;
+
   return (
     <div className="page">
       <div className="headerWindow">
@@ -58,9 +72,16 @@ export default function MuseboardGrowthConversionPage() {
           <section className="window">
             <div className="windowTop">
               <div className="windowTopLeft">
+                <div className="dots" style={{ paddingTop: 0 }}>
+                  <div className="dot red"></div>
+                  <div className="dot yellow"></div>
+                  <div className="dot green"></div>
+                </div>
                 <strong>Museboard Growth &amp; Conversion Analysis</strong>
               </div>
-              <Link href="/projects">Back to Projects</Link>
+              <Link href="/projects" style={backLinkStyle}>
+                Back to Projects
+              </Link>
             </div>
 
             <div className="windowBody">

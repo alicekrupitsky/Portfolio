@@ -100,7 +100,14 @@ export default function PortfolioPage() {
           <main style={{ display: "grid", gap: "22px" }}>
             <section className="window">
               <div className="windowTop">
-                <strong>Content Portfolio</strong>
+                <div className="windowTopLeft">
+                  <div className="dots" style={{ paddingTop: 0 }}>
+                    <div className="dot red"></div>
+                    <div className="dot yellow"></div>
+                    <div className="dot green"></div>
+                  </div>
+                  <strong>Content Portfolio</strong>
+                </div>
               </div>
 
               <div className="windowBody">

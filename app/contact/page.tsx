@@ -26,7 +26,14 @@ export default function ContactPage() {
         <main style={{ display: "grid", gap: "22px" }}>
           <section className="window" style={{ maxWidth: '360px', width: '100%', margin: '0 auto', justifySelf: 'center', height: 'max-content', overflow: 'hidden' }}>
             <div className="windowTop">
-              <strong>Connect.EXE</strong>
+              <div className="windowTopLeft">
+                <div className="dots" style={{ paddingTop: 0 }}>
+                  <div className="dot red"></div>
+                  <div className="dot yellow"></div>
+                  <div className="dot green"></div>
+                </div>
+                <strong>Connect.EXE</strong>
+              </div>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px 22px 14px' }}>

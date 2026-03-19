@@ -190,6 +190,11 @@ function SkillsWindow() {
     <section className="window">
       <div className="windowTop">
         <div className="windowTopLeft">
+          <div className="dots" style={{ paddingTop: 0 }}>
+            <div className="dot red"></div>
+            <div className="dot yellow"></div>
+            <div className="dot green"></div>
+          </div>
           <strong>Installed Programs</strong>
         </div>
 

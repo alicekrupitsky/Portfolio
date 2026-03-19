@@ -1,5 +1,5 @@
 import Nav from "@/components/nav";
-import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
 
 export default function InvolvementPage() {
   return (
@@ -11,9 +11,7 @@ export default function InvolvementPage() {
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <Link href="/" className="name">
-            ALICE KRUPITSKY
-          </Link>
+          <SiteNameLink />
         </div>
         <div className="headerBottom">
           <div className="main-title">Advertising Major + CS Minor</div>
@@ -61,3 +59,10 @@ export default function InvolvementPage() {
     </div>
   );
 }
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import Nav from "@/components/nav";
-import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
 import ButtonSocialIconDemo from "@/components/ui/social-icon";
 
 export default function ContactPage() {
@@ -12,9 +12,7 @@ export default function ContactPage() {
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <Link href="/" className="name">
-            ALICE KRUPITSKY
-          </Link>
+          <SiteNameLink />
         </div>
         <div className="headerBottom">
           <div className="main-title">Advertising Major + CS Minor</div>
@@ -52,3 +50,10 @@ export default function ContactPage() {
     </div>
   );
 }
+
+
+
+
+
+
+

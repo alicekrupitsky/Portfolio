@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
 import Nav from "@/components/nav";
 
 export const metadata: Metadata = {
@@ -42,9 +43,7 @@ export default function MuseboardGrowthConversionPage() {
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <Link href="/" className="name">
-            ALICE KRUPITSKY
-          </Link>
+          <SiteNameLink />
         </div>
         <div className="headerBottom">
           <div className="main-title">Advertising Major + CS Minor</div>
@@ -150,3 +149,9 @@ export default function MuseboardGrowthConversionPage() {
     </div>
   );
 }
+
+
+
+
+
+

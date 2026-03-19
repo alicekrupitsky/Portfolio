@@ -1,5 +1,6 @@
 import Nav from "@/components/nav";
-import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
+import SiteHeaderTitles from "@/components/ui/site-header-titles";
 
 export default function Home() {
   return (
@@ -11,13 +12,10 @@ export default function Home() {
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <Link href="/" className="name">
-            ALICE KRUPITSKY
-          </Link>
+          <SiteNameLink />
         </div>
         <div className="headerBottom">
-          <div className="main-title">Advertising Major + CS Minor</div>
-          <div className="main-title">University of Florida</div>
+          <SiteHeaderTitles />
         </div>
       </div>
 
@@ -77,3 +75,8 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+

@@ -1,9 +1,26 @@
-import RealismButton from "@/components/ui/shiny-borders-button";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export default function DemoOne() {
+  const words = [
+    "Welcome to Typewriter",
+    "Create beautiful effects",
+    "With React & Tailwind",
+    "Type away!",
+  ];
+
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-white dark:bg-black">
-      <RealismButton text="See Projects" />
-    </div>
+    <main className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold mb-8">
+          <Typewriter
+            words={words}
+            speed={80}
+            delayBetweenWords={2000}
+            cursor={true}
+            cursorChar="|"
+          />
+        </h1>
+      </div>
+    </main>
   );
 }

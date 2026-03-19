@@ -1,5 +1,6 @@
 import Nav from "@/components/nav";
 import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
 import { ArrowUpRight } from "lucide-react";
 import RealismButton from "@/components/ui/shiny-borders-button";
 
@@ -43,9 +44,7 @@ export default function ProjectsPage() {
             <div className="dot yellow"></div>
             <div className="dot green"></div>
           </div>
-          <Link href="/" className="name">
-            ALICE KRUPITSKY
-          </Link>
+          <SiteNameLink />
         </div>
         <div className="headerBottom">
           <div className="main-title">Advertising Major + CS Minor</div>
@@ -154,7 +153,7 @@ export default function ProjectsPage() {
                     </Link>
                   </div>
                   <div className="meta" style={cardMetaRowStyle}>
-                    <span>Data Analytics | Client work through SOLV Digital (Associate)</span>
+                    <span>Data Analytics | Client work through SOLV Digital</span>
                     <Link
                       href="/projects/museboard-growth-conversion-analysis"
                       style={{ ...actionLinkStyle, display: "inline-flex", alignItems: "center", gap: "6px" }}
@@ -275,3 +274,9 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
+
+
+
+
+

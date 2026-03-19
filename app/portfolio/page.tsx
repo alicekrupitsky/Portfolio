@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import Link from "next/link";
+import SiteNameLink from "@/components/ui/site-name-link";
 import { useState } from "react";
 import Nav from "@/components/nav";
 
@@ -86,14 +86,12 @@ export default function PortfolioPage() {
               <div className="dot yellow"></div>
               <div className="dot green"></div>
             </div>
-            <Link href="/" className="name">
-              ALICE KRUPITSKY
-            </Link>
+            <SiteNameLink />
           </div>
           <div className="headerBottom">
-            <div className="main-title">Advertising Major + CS Minor</div>
-            <div className="main-title">University of Florida</div>
-          </div>
+          <div className="main-title">Advertising Major + CS Minor</div>
+          <div className="main-title">University of Florida</div>
+        </div>
         </div>
 
         <div className="grid">
@@ -176,3 +174,10 @@ export default function PortfolioPage() {
     </>
   );
 }
+
+
+
+
+
+
+

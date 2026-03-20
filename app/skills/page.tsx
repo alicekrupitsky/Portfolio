@@ -1,7 +1,6 @@
 "use client";
 
-import Nav from "@/components/nav";
-import SiteNameLink from "@/components/ui/site-name-link";
+import PageShell from "@/components/page-shell";
 import { useEffect, useRef, useState } from "react";
 
 const SKILLS = [
@@ -190,7 +189,7 @@ function SkillsWindow() {
     <section className="window">
       <div className="windowTop">
         <div className="windowTopLeft">
-          <div className="dots" style={{ paddingTop: 0 }}>
+          <div className="dots">
             <div className="dot red"></div>
             <div className="dot yellow"></div>
             <div className="dot green"></div>
@@ -238,36 +237,12 @@ function SkillsWindow() {
           </div>
         )}
 
-        <div
-          style={{
-            marginTop: 26,
-            paddingTop: 20,
-            borderTop: "3px solid var(--green2)",
-          }}
-        >
-          <div
-            style={{
-              textAlign: "center",
-              fontSize: 30,
-              fontWeight: "bold",
-              color: "var(--green2)",
-              letterSpacing: ".08em",
-              marginBottom: 14,
-            }}
-          >
-            Certifications
-          </div>
+        <div className="skillsPanelExtra">
+          <div className="skillsCertHeading">Certifications</div>
 
-          <ul
-            style={{
-              maxWidth: 700,
-              margin: "0 auto",
-              lineHeight: 1.5,
-              paddingLeft: 26,
-            }}
-          >
+          <ul className="skillsCertList">
             {CERTIFICATIONS.map((cert, index) => (
-              <li key={index} style={{ marginBottom: 9 }}>
+              <li key={index} className="skillsCertItem">
                 {cert.link ? (
                   <a href={cert.link} target="_blank" rel="noopener noreferrer">
                     {cert.name}
@@ -286,39 +261,8 @@ function SkillsWindow() {
 
 export default function SkillsPage() {
   return (
-    <div className="page">
-      <div className="headerWindow">
-        <div className="headerTop">
-          <div className="dots">
-            <div className="dot red"></div>
-            <div className="dot yellow"></div>
-            <div className="dot green"></div>
-          </div>
-          <SiteNameLink />
-        </div>
-        <div className="headerBottom">
-          <div className="main-title">Advertising Major + CS Minor</div>
-          <div className="main-title">University of Florida</div>
-        </div>
-      </div>
-
-      <div className="grid">
-        <Nav currentPath="/skills" />
-
-        <main style={{ display: "grid", gap: 22 }}>
-          <SkillsWindow />
-          <div className="footer">
-            Made with <span className="heart">&#9829;</span> by Alice
-          </div>
-        </main>
-      </div>
-    </div>
+    <PageShell currentPath="/skills" mainClassName="pageMain start">
+      <SkillsWindow />
+    </PageShell>
   );
 }
-
-
-
-
-
-
-

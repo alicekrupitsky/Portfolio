@@ -1,10 +1,7 @@
-"use client";
+'use client';
 
-/* eslint-disable @next/next/no-img-element */
-
-import SiteNameLink from "@/components/ui/site-name-link";
+import PageShell from "@/components/page-shell";
 import { useState } from "react";
-import Nav from "@/components/nav";
 
 type PortfolioImage = {
   src: string;
@@ -78,87 +75,62 @@ export default function PortfolioPage() {
 
   return (
     <>
-      <div className="page">
-        <div className="headerWindow">
-          <div className="headerTop">
-            <div className="dots">
-              <div className="dot red"></div>
-              <div className="dot yellow"></div>
-              <div className="dot green"></div>
+      <PageShell currentPath="/portfolio">
+        <section className="window">
+          <div className="windowTop">
+            <div className="windowTopLeft">
+              <div className="dots">
+                <div className="dot red"></div>
+                <div className="dot yellow"></div>
+                <div className="dot green"></div>
+              </div>
+              <strong>Content Portfolio</strong>
             </div>
-            <SiteNameLink />
           </div>
-          <div className="headerBottom">
-          <div className="main-title">Advertising Major + CS Minor</div>
-          <div className="main-title">University of Florida</div>
-        </div>
-        </div>
 
-        <div className="grid">
-          <Nav currentPath="/portfolio" />
+          <div className="windowBody">
+            <p>
+              A simple gallery of the brand work I have created for Computing
+              Student Union and Golden Egg Cafe.
+            </p>
 
-          <main style={{ display: "grid", gap: "22px" }}>
-            <section className="window">
-              <div className="windowTop">
-                <div className="windowTopLeft">
-                  <div className="dots" style={{ paddingTop: 0 }}>
-                    <div className="dot red"></div>
-                    <div className="dot yellow"></div>
-                    <div className="dot green"></div>
+            <div className="cardList" style={{ marginTop: "18px" }}>
+              {sections.map((section) => (
+                <article key={section.title} className="miniCard">
+                  <div className="brandHeader" style={{ marginBottom: "10px" }}>
+                    <div className="brandLabel">{section.title}</div>
+                    <div className="brandHandle">{section.handle}</div>
                   </div>
-                  <strong>Content Portfolio</strong>
-                </div>
-              </div>
+                  <div className="meta">{section.role}</div>
+                  <p style={{ marginBottom: "18px" }}>{section.summary}</p>
 
-              <div className="windowBody">
-                <p>
-                  A simple gallery of the brand work I have created for Computing
-                  Student Union and Golden Egg Cafe.
-                </p>
-
-                <div className="cardList" style={{ marginTop: "18px" }}>
-                  {sections.map((section) => (
-                    <article key={section.title} className="miniCard">
-                      <div className="brandHeader" style={{ marginBottom: "10px" }}>
-                        <div className="brandLabel">{section.title}</div>
-                        <div className="brandHandle">{section.handle}</div>
-                      </div>
-                      <div className="meta">{section.role}</div>
-                      <p style={{ marginBottom: "18px" }}>{section.summary}</p>
-
-                      <div className="postGrid">
-                        {section.images.map((image) => (
-                          <button
-                            key={image.src}
-                            type="button"
-                            className="postCard"
-                            onClick={() => setActiveImage(image)}
-                            style={{
-                              padding: 0,
-                              font: "inherit",
-                              color: "inherit",
-                              textAlign: "left",
-                            }}
-                          >
-                            <div className="postImgWrap">
-                              <img className="postImg" src={image.src} alt={image.alt} />
-                            </div>
-                            <div className="postMeta">{image.caption}</div>
-                          </button>
-                        ))}
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <div className="footer">
-              Made with <span className="heart">&#9829;</span> by Alice
+                  <div className="postGrid">
+                    {section.images.map((image) => (
+                      <button
+                        key={image.src}
+                        type="button"
+                        className="postCard"
+                        onClick={() => setActiveImage(image)}
+                        style={{
+                          padding: 0,
+                          font: "inherit",
+                          color: "inherit",
+                          textAlign: "left",
+                        }}
+                      >
+                        <div className="postImgWrap">
+                          <img className="postImg" src={image.src} alt={image.alt} />
+                        </div>
+                        <div className="postMeta">{image.caption}</div>
+                      </button>
+                    ))}
+                  </div>
+                </article>
+              ))}
             </div>
-          </main>
-        </div>
-      </div>
+          </div>
+        </section>
+      </PageShell>
 
       {activeImage ? (
         <div
@@ -181,10 +153,3 @@ export default function PortfolioPage() {
     </>
   );
 }
-
-
-
-
-
-
-

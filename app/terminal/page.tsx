@@ -1,43 +1,10 @@
 import PortfolioTerminal from "@/components/ui/interactive-portfolio-terminal-component";
-import Nav from "@/components/nav";
-import SiteNameLink from "@/components/ui/site-name-link";
+import PageShell from "@/components/page-shell";
 
 export default function TerminalPage() {
   return (
-    <div className="page">
-      <div className="headerWindow">
-        <div className="headerTop">
-          <div className="dots">
-            <div className="dot red"></div>
-            <div className="dot yellow"></div>
-            <div className="dot green"></div>
-          </div>
-          <SiteNameLink />
-        </div>
-        <div className="headerBottom">
-          <div className="main-title">Advertising Major + CS Minor</div>
-          <div className="main-title">University of Florida</div>
-        </div>
-      </div>
-
-      <div className="grid">
-        <Nav currentPath="/terminal" />
-
-        <main style={{ display: "grid", gap: "22px" }}>
-          <PortfolioTerminal />
-
-          <div className="footer">
-            Made with <span className="heart">&#9829;</span> by Alice
-          </div>
-        </main>
-      </div>
-    </div>
+    <PageShell currentPath="/terminal">
+      <PortfolioTerminal />
+    </PageShell>
   );
 }
-
-
-
-
-
-
-

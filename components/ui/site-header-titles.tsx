@@ -8,7 +8,7 @@ export default function SiteHeaderTitles() {
 
   return (
     <>
-      <div className="main-title">
+      <div className="bigTitle">
         <Typewriter
           words={["Advertising Major + CS Minor"]}
           speed={55}
@@ -17,7 +17,7 @@ export default function SiteHeaderTitles() {
           onComplete={() => setShowSecondLine(true)}
         />
       </div>
-      <div className="main-title">
+      <div className="sub-title">
         {showSecondLine ? (
           <Typewriter
             words={["University of Florida"]}

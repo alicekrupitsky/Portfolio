@@ -1,8 +1,7 @@
 "use client";
 
-import Nav from "@/components/nav";
+import PageShell from "@/components/page-shell";
 import Timeline3D, { type TimelineEvent } from "@/components/ui/3d-interactive-timeline";
-import SiteNameLink from "@/components/ui/site-name-link";
 import {
   BriefcaseBusiness,
   Building2,
@@ -45,7 +44,7 @@ export default function ExperiencePage() {
     {
       id: "solv",
       date: "Nov 2025 – Present",
-      title: "Associate Content Specialist - SOLV Digital",
+      title: "Associate - SOLV Digital",
       description: "",
       icon: <Presentation className="h-5 w-5" />,
       category: "Analytics",
@@ -100,52 +99,24 @@ export default function ExperiencePage() {
   ];
 
   return (
-    <div className="page experiencePage">
-      <div className="headerWindow">
-        <div className="headerTop">
-          <div className="dots">
-            <div className="dot red"></div>
-            <div className="dot yellow"></div>
-            <div className="dot green"></div>
-          </div>
-          <SiteNameLink />
-        </div>
-        <div className="headerBottom">
-          <div className="main-title">Advertising Major + CS Minor</div>
-          <div className="main-title">University of Florida</div>
-        </div>
-      </div>
-
-      <div className="grid experienceGrid">
-        <Nav currentPath="/experience" />
-
-        <main style={{ display: "grid", gap: "22px" }}>
-          <section className="window experienceWindow">
-            <div className="windowTop">
-              <div className="windowTopLeft">
-                <div className="dots" style={{ paddingTop: 0 }}>
-                  <div className="dot red"></div>
-                  <div className="dot yellow"></div>
-                  <div className="dot green"></div>
-                </div>
-                <strong>Experience</strong>
-              </div>
+    <PageShell currentPath="/experience" mainClassName="pageMain start">
+      <section className="window experienceWindow">
+        <div className="windowTop">
+          <div className="windowTopLeft">
+            <div className="dots">
+              <div className="dot red"></div>
+              <div className="dot yellow"></div>
+              <div className="dot green"></div>
             </div>
-
-            <div className="windowBody experienceWindowBody">
-              <Timeline3D
-                events={timelineEvents}
-                
-              />
-            </div>
-          </section>
-
-          <div className="footer">
-            Made with <span className="heart">&#9829;</span> by Alice
+            <strong>Experience</strong>
           </div>
-        </main>
-      </div>
-    </div>
+        </div>
+
+        <div className="windowBody experienceWindowBody">
+          <Timeline3D events={timelineEvents} />
+        </div>
+      </section>
+    </PageShell>
   );
 }
 

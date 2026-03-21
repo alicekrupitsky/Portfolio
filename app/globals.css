@@ -255,6 +255,16 @@ a:hover {
   }
 }
 
+@keyframes shimmer2 {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
 .headerTop {
   background: var(--green);
   min-height: 56px;
@@ -1208,28 +1218,64 @@ a:hover {
 }
 
 .skill {
-  border: 2px solid var(--green2);
-  background: var(--soft);
-  box-shadow: 0 2px 0 var(--green2);
-  border-radius: 12px;
-  padding: 9px 15px;
-  font-size: 21px;
-  transition: transform .16s ease, background .16s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 17px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--green2);
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--color-panel-gradient-start) 0%, var(--color-panel-gradient-end) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -1px 0 var(--color-panel-ring),
+    0 3px 0 var(--green2),
+    0 6px 12px var(--color-surface-shadow);
+  border-radius: 8px;
+  padding-inline: 17px;
+  font-size: 22px;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: background .12s ease, border-color .12s ease, transform .12s ease, box-shadow .12s ease;
 }
 
 .skill:hover {
-  transform: translateY(-4px);
-  background: var(--bg);
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, var(--card-bg) 0%, var(--color-panel-gradient-start) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 var(--color-panel-ring),
+    0 4px 0 var(--green2),
+    0 8px 14px var(--color-surface-shadow-hover);
+}
+
+.skill:active {
+  transform: translateY(1px);
+  background: linear-gradient(180deg, var(--color-panel-gradient-end) 0%, var(--color-panel-gradient-start) 100%);
+  box-shadow:
+    inset 0 2px 3px var(--color-panel-ring),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 1px 0 var(--green2);
 }
 
 .skill.sandbox-mode {
   position: absolute;
   transition: none;
   cursor: grab;
+  min-height: 48px;
 }
 
 .skill.sandbox-mode:active {
   cursor: grabbing;
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 0 var(--color-panel-ring),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 0 var(--green2);
 }
 
 .skillsSandbox {
@@ -1244,14 +1290,18 @@ a:hover {
 .sandboxPlayBtn {
   cursor: pointer;
   font-family: 'VT323', monospace;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   border-radius: 12px;
   border: 3px solid var(--color-text-inverse);
-  padding: 10px 18px;
-  letter-spacing: .08em;
-  box-shadow: 0 4px 0 var(--color-depth-shadow), 0 0 20px var(--color-action-glow);
-  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+  padding: 10px 20px;
+  letter-spacing: .12em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 4px 0 var(--color-depth-shadow),
+    0 0 22px var(--color-action-glow),
+    0 0 42px color-mix(in srgb, var(--color-action-glow) 72%, transparent);
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease, text-shadow .12s ease;
   user-select: none;
   background: var(--green);
   color: var(--color-text-inverse);
@@ -1264,7 +1314,11 @@ a:hover {
 
 .sandboxPlayBtn:hover {
   filter: brightness(1.15);
-  box-shadow: 0 4px 0 var(--color-depth-shadow), 0 0 25px var(--color-action-glow-hover);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.48);
+  box-shadow:
+    0 4px 0 var(--color-depth-shadow),
+    0 0 28px var(--color-action-glow-hover),
+    0 0 54px color-mix(in srgb, var(--color-action-glow-hover) 78%, transparent);
 }
 
 .sandboxPlayBtn.palette {
@@ -1364,7 +1418,6 @@ a:hover {
 .skillsPanelExtra {
   margin-top: 26px;
   padding-top: 20px;
-  border-top: 3px solid var(--green2);
 }
 
 .skillsCertHeading {
@@ -1376,15 +1429,142 @@ a:hover {
   margin-bottom: 14px;
 }
 
-.skillsCertList {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
-  padding-left: 26px;
+.certWindowNested {
+  margin-top: 0;
 }
 
-.skillsCertItem {
-  margin-bottom: 9px;
+.certWindowBody {
+  padding: 18px 20px;
+}
+
+.certExplorer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 16px;
+  row-gap: 20px;
+}
+
+.certFile {
+  border: var(--ui-frame-border);
+  border-radius: 10px;
+  background: var(--soft);
+  box-shadow:
+    0 3px 0 var(--ink),
+    0 7px 0 var(--color-surface-shadow);
+  overflow: hidden;
+  transition: background .14s ease, transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+
+.certFile:hover {
+  background: var(--card-bg);
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 0 var(--ink),
+    0 9px 0 var(--color-surface-shadow-hover);
+}
+
+.certFile.is-open {
+  background: var(--color-panel-gradient-start);
+  border-color: var(--ink);
+  box-shadow:
+    0 4px 0 var(--ink),
+    0 9px 0 var(--color-surface-shadow-hover);
+}
+
+.certFileTop {
+  min-height: 38px;
+  padding: 8px 12px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  background: var(--green2);
+  color: var(--color-text-inverse);
+  border-bottom: 2px solid var(--color-window-divider);
+}
+
+.certFileDots {
+  padding-top: 0;
+  align-self: start;
+  margin-top: 2px;
+}
+
+.certFileTabLabel {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  opacity: 0.96;
+}
+
+.certFileButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  min-height: 76px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.certFileButton:focus-visible {
+  outline: 2px solid var(--color-panel-border);
+  outline-offset: -3px;
+}
+
+.certFileText {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.certFileMeta {
+  display: block;
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--color-panel-text-muted);
+  letter-spacing: 0.01em;
+}
+
+.certFileStatus {
+  align-self: center;
+  justify-self: end;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  color: var(--green2);
+  opacity: 0.72;
+  white-space: nowrap;
+}
+
+.certFileDetail {
+  border-top: 2px solid var(--color-window-divider);
+  padding: 2px 16px 14px;
+  font-size: 22px;
+  line-height: 1.45;
+  background: var(--color-panel-card-bg);
+}
+
+.certFileDetail p {
+  margin: 0 0 10px;
+}
+
+.certFileDetail a {
+  display: inline-block;
+  color: var(--green2);
+  border-bottom: 2px dotted var(--green2);
+}
+
+.certFileDetail a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
 }
 
 .connectWindow {
@@ -1561,6 +1741,19 @@ a:hover {
   .sandboxPlayBtn.palette {
     width: 100%;
   }
+
+  .certExplorer {
+    grid-template-columns: 1fr;
+  }
+
+  .certFileButton {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .certFileStatus {
+    display: none;
+  }
+
 }
 
 .contactGrid {

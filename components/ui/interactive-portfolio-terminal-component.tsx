@@ -82,8 +82,11 @@ export default function PortfolioTerminal() {
     - Google Analytics Certification - Google (Feb 2026)
       https://skillshop.credential.net/ef8f5a0f-538f-4f69-ac14-38b9a477e0ce
     - Social Media Marketing Professional Certificate - Hootsuite
+      https://www.linkedin.com/learning/certificates/eef9c1454412dee2e7a8c6fdc097afc8a306f4e6af8d23546d3e3237729e1bcc?u=41282748
     - Design User Experiences with Figma - LinkedIn Learning
+      https://www.linkedin.com/learning/certificates/4e4dad6f615cb321a0a6325f8bc3b373f64c2b7d48b3722e181ca0ec163768a5?u=41282748
     - Psychology Fundamentals for Marketing and Sales - LinkedIn Learning
+      https://www.linkedin.com/learning/certificates/c39baa7d88f397799aceaa2f92575d6d82f99777819fdac8def3a96bda34cf48?u=41282748
 `,
     experience: () => `
 [EXPERIENCE]

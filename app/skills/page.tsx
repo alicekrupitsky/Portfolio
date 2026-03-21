@@ -1,6 +1,7 @@
 "use client";
 
 import PageShell from "@/components/page-shell";
+import ShimmerButton from "@/components/ui/shimmer-button";
 import { useEffect, useRef, useState } from "react";
 
 const SKILLS = [
@@ -29,12 +30,41 @@ const SKILLS = [
 
 const CERTIFICATIONS = [
   {
-    name: "Google Analytics Certification - Google (Feb 2026)",
+    id: "google-analytics",
+    shortName: "Google Analytics Certification",
+    issuer: "Google",
+    date: "Feb 2026",
+    application:
+      "Used to read campaign traffic, spot drop-offs in user journeys, and turn audience behavior into clearer content decisions.",
     link: "https://skillshop.credential.net/ef8f5a0f-538f-4f69-ac14-38b9a477e0ce#acc.jkzMfpNU",
   },
-  { name: "Social Media Marketing Professional Certificate - Hootsuite" },
-  { name: "Design User Experiences with Figma - LinkedIn Learning" },
-  { name: "Psychology Fundamentals for Marketing & Sales - LinkedIn Learning" },
+  {
+    id: "social-media-marketing",
+    shortName: "Social Media Marketing Professional Certificate",
+    issuer: "Hootsuite",
+    date: "Dec 2025",
+    application:
+      "Applied in post planning, audience targeting, and performance review for brand accounts and campaign iterations.",
+    link: "https://www.linkedin.com/learning/certificates/eef9c1454412dee2e7a8c6fdc097afc8a306f4e6af8d23546d3e3237729e1bcc?u=41282748",
+  },
+  {
+    id: "figma-ux",
+    shortName: "Design User Experiences with Figma",
+    issuer: "LinkedIn Learning",
+    date: "Jan 2026",
+    application:
+      "Shows up in wireframes, interface cleanup, and making product flows easier to scan and navigate before build.",
+    link: "https://www.linkedin.com/learning/certificates/4e4dad6f615cb321a0a6325f8bc3b373f64c2b7d48b3722e181ca0ec163768a5?u=41282748",
+  },
+  {
+    id: "psychology-marketing-sales",
+    shortName: "Psychology Fundamentals for Marketing & Sales",
+    issuer: "LinkedIn Learning",
+    date: "Dec 2025",
+    application:
+      "Informs message framing, offer presentation, and how I structure content so calls to action feel more intuitive.",
+    link: "https://www.linkedin.com/learning/certificates/c39baa7d88f397799aceaa2f92575d6d82f99777819fdac8def3a96bda34cf48?u=41282748",
+  },
 ];
 
 type SkillState = {
@@ -44,6 +74,76 @@ type SkillState = {
   vx: number;
   vy: number;
 };
+
+function CertificationsWindow() {
+  const [activeCertId, setActiveCertId] = useState("");
+
+  return (
+    <section className="window certWindowNested">
+      <div className="windowTop">
+        <div className="windowTopLeft">
+          <div className="dots">
+            <div className="dot red"></div>
+            <div className="dot yellow"></div>
+            <div className="dot green"></div>
+          </div>
+          <strong>Certifications</strong>
+        </div>
+      </div>
+
+      <div className="windowBody certWindowBody">
+        <div className="certExplorer" role="list" aria-label="Certification list">
+          {CERTIFICATIONS.map((cert) => {
+            const isOpen = cert.id === activeCertId;
+
+            return (
+              <article
+                key={cert.id}
+                className={`certFile${isOpen ? " is-open" : ""}`}
+                role="listitem"
+              >
+                <div className="certFileTop" aria-hidden="true">
+                  <div className="dots certFileDots">
+                    <div className="dot red"></div>
+                    <div className="dot yellow"></div>
+                    <div className="dot green"></div>
+                  </div>
+                  <span className="certFileTabLabel">{cert.shortName}</span>
+                </div>
+                <button
+                  type="button"
+                  className="certFileButton"
+                  aria-expanded={isOpen}
+                  onClick={() =>
+                    setActiveCertId((current) => (current === cert.id ? "" : cert.id))
+                  }
+                >
+                  <span className="certFileText">
+                    <span className="certFileMeta">
+                      {cert.issuer} / {cert.date}
+                    </span>
+                  </span>
+                  <span className="certFileStatus" aria-hidden="true">
+                    {isOpen ? "hide details" : "show details"}
+                  </span>
+                </button>
+
+                {isOpen ? (
+                  <div className="certFileDetail">
+                    <p>{cert.application}</p>
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                      Open credential
+                    </a>
+                  </div>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function SkillsWindow() {
   const [isSandbox, setIsSandbox] = useState(false);
@@ -186,7 +286,7 @@ function SkillsWindow() {
   };
 
   return (
-    <section className="window">
+    <section className="window noWindowLift">
       <div className="windowTop">
         <div className="windowTopLeft">
           <div className="dots">
@@ -197,9 +297,21 @@ function SkillsWindow() {
           <strong>Installed Programs</strong>
         </div>
 
-        <button type="button" className="sandboxPlayBtn" onClick={toggleSandbox}>
+        <ShimmerButton
+          type="button"
+          className="sandboxPlayBtn"
+          onClick={toggleSandbox}
+          style={{
+            backgroundImage:
+              "linear-gradient(110deg, color-mix(in srgb, var(--green) 88%, white 12%) 0%, color-mix(in srgb, var(--green) 94%, white 6%) 42%, rgba(255, 255, 255, 0.42) 50%, color-mix(in srgb, var(--green) 94%, white 6%) 58%, color-mix(in srgb, var(--green) 88%, white 12%) 100%)",
+            backgroundColor: "var(--green)",
+            backgroundSize: "200% 100%",
+            borderColor: "var(--color-text-inverse)",
+            color: "var(--color-text-inverse)",
+          }}
+        >
           {isSandbox ? "STOP" : "PLAY"}
-        </button>
+        </ShimmerButton>
       </div>
 
       <div className="windowBody">
@@ -236,23 +348,8 @@ function SkillsWindow() {
             ))}
           </div>
         )}
-
         <div className="skillsPanelExtra">
-          <div className="skillsCertHeading">Certifications</div>
-
-          <ul className="skillsCertList">
-            {CERTIFICATIONS.map((cert, index) => (
-              <li key={index} className="skillsCertItem">
-                {cert.link ? (
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                    {cert.name}
-                  </a>
-                ) : (
-                  cert.name
-                )}
-              </li>
-            ))}
-          </ul>
+          <CertificationsWindow />
         </div>
       </div>
     </section>

@@ -58,7 +58,7 @@ export default function ExperiencePage() {
     {
       id: "golden-egg",
       date: "Jul 2025 – Present",
-      title: "Social Media & Marketing Manager - Golden Egg Café",
+      title: "Social Media & Marketing Manager - Golden Egg Cafe",
       description: "",
       icon: <Building2 className="h-5 w-5" />,
       category: "Brand Growth",
@@ -100,7 +100,7 @@ export default function ExperiencePage() {
 
   return (
     <PageShell currentPath="/experience" mainClassName="pageMain start">
-      <section className="window experienceWindow">
+      <section className="window experienceWindow noWindowLift">
         <div className="windowTop">
           <div className="windowTopLeft">
             <div className="dots">
@@ -119,5 +119,4 @@ export default function ExperiencePage() {
     </PageShell>
   );
 }
-
 

@@ -583,6 +583,23 @@ a:hover {
     0 10px 0 rgba(0, 0, 0, 0.12);
   overflow: hidden;
   position: relative;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.window:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 6px 0 rgba(20, 32, 18, 0.88),
+    0 10px 0 rgba(0, 0, 0, 0.15),
+    0 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+.noWindowLift:hover {
+  transform: none;
+  box-shadow:
+    0 3px 0 rgba(20, 32, 18, 0.88),
+    0 7px 0 rgba(0, 0, 0, 0.15),
+    0 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .window::before {
@@ -672,6 +689,25 @@ a:hover {
     0 3px 0 var(--green2),
     0 8px 18px var(--color-surface-shadow);
   overflow: hidden;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.aboutPhotoWindow:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 1px 1px 0 var(--color-button-inset),
+    inset -1px -1px 0 var(--color-window-divider),
+    0 5px 0 var(--green2),
+    0 12px 22px var(--color-surface-shadow-hover);
+}
+
+.noPhotoLift:hover {
+  transform: none;
+  box-shadow:
+    inset 1px 1px 0 var(--color-button-inset),
+    inset -1px -1px 0 var(--color-window-divider),
+    0 3px 0 var(--green2),
+    0 8px 18px var(--color-surface-shadow);
 }
 
 .aboutPhotoTop {
@@ -802,6 +838,20 @@ a:hover {
 
 .homeTitle {
   font-size: 40px;
+}
+
+.inlineLink {
+  color: var(--green2);
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: rgba(121, 161, 93, 0.9);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.inlineLink:hover,
+.inlineLink:focus-visible {
+  color: var(--green);
+  text-decoration-color: rgba(106, 143, 82, 0.95);
 }
 
 .main-title {
@@ -1793,6 +1843,41 @@ a:hover {
 
 .projectCardFaded {
   opacity: 0.9;
+}
+
+.projectTerminalWindow {
+  margin-top: 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.projectTerminalTop {
+  min-height: var(--ui-titlebar-height);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--green2);
+  color: var(--color-text-inverse);
+  font-size: 19px;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--color-window-divider);
+}
+
+.projectTerminalBody {
+  padding: 14px 0 0;
+  background: transparent;
+}
+
+.projectTerminalBody .projectTagRow {
+  margin-top: 0;
+}
+
+.projectTerminalBody ul {
+  margin-bottom: 0;
 }
 
 .projectTitleLink,

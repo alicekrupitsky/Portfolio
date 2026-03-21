@@ -97,9 +97,32 @@ export function Timeline3D({
 
                 {event.bullets?.length ? (
                   <ul className="experienceTimelineBullets">
-                    {event.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
+                    {event.bullets.map((bullet) => {
+                      const instagramMatch = /instagram/i;
+                      if (instagramMatch.test(bullet)) {
+                        const parts = bullet.split(/(instagram)/gi);
+                        return (
+                          <li key={bullet}>
+                            {parts.map((part, index) =>
+                              instagramMatch.test(part) ? (
+                                <a
+                                  key={index}
+                                  href="https://www.instagram.com/ufcsu/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inlineLink"
+                                >
+                                  {part}
+                                </a>
+                              ) : (
+                                part
+                              )
+                            )}
+                          </li>
+                        );
+                      }
+                      return <li key={bullet}>{bullet}</li>;
+                    })}
                   </ul>
                 ) : null}
 

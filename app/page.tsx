@@ -20,7 +20,7 @@ export default function Home() {
         <div className="windowBody">
           <div className="aboutContent">
             <aside className="aboutPhotoWrap">
-              <div className="aboutPhotoWindow">
+                  <div className="aboutPhotoWindow noPhotoLift">
                 <div className="aboutPhotoTop">
                   <div className="aboutPhotoTopLeft">
                     <div className="dots aboutPhotoDots">
@@ -82,7 +82,6 @@ export default function Home() {
     </PageShell>
   );
 }
-
 
 
 

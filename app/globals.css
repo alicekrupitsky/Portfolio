@@ -92,7 +92,7 @@
   --ui-panel-radius: 8px;
   --ui-panel-shadow: 0 3px 0 var(--green2), 0 8px 18px var(--color-surface-shadow);
   --ui-panel-shadow-hover: 0 5px 0 var(--green2), 0 12px 24px var(--color-surface-shadow-hover);
-  --ui-titlebar-height: 48px;
+  --ui-titlebar-height: 50px;
   --ui-titlebar-padding: 10px 14px;
   --background: #eef4e5;
   --foreground: #22321e;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 .experiencePage {
-  max-width: 1320px;
+  max-width: 1290px;
 }
 
 .grid {
@@ -637,7 +637,7 @@ a:hover {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 27px;
+  font-size: 29px;
   letter-spacing: .08em;
   line-height: 0.9;
 }
@@ -664,6 +664,11 @@ a:hover {
   padding: 18px 18px 22px;
 }
 
+.experienceWindow {
+  width: 100%;
+  max-width: 1050px;
+}
+
 .windowBody p {
   margin: 0 0 14px;
   line-height: 1.55;
@@ -679,7 +684,7 @@ a:hover {
 }
 
 .aboutContent {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .aboutPhotoWrap {
@@ -687,6 +692,7 @@ a:hover {
   float: right;
   margin-left: 1.5rem;
   margin-bottom: 1rem;
+  margin-top: 8px;
 }
 
 .aboutPhotoWindow {
@@ -728,7 +734,7 @@ a:hover {
   justify-content: flex-start;
   background: var(--green2);
   color: var(--color-text-inverse);
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: 0.03em;
   border-bottom: 2px solid var(--color-window-divider);
 }
@@ -913,6 +919,8 @@ a:hover {
 
 .experienceTimeline {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .experienceTimelineIntro {
@@ -1046,6 +1054,7 @@ a:hover {
   background: var(--green2);
   color: var(--color-text-inverse);
   border-bottom: 2px solid var(--color-window-divider);
+  font-size: 21px;
 }
 
 
@@ -2055,7 +2064,7 @@ a:hover {
   justify-content: flex-start;
   background: var(--green2);
   color: var(--color-text-inverse);
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: 0.03em;
   border-bottom: 2px solid var(--color-window-divider);
 }

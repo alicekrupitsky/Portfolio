@@ -153,7 +153,7 @@ export default function ProjectsPage() {
             </div>
 
             <div className="meta cardMetaRow">
-              <span className="cardMetaText">Data Analytics | Client work through SOLV Digital</span>
+              <span className="cardMetaText">Data Analytics | Client work through SOLV Digital | Mar 2026</span>
             </div>
 
             <div className="projectTagRow">

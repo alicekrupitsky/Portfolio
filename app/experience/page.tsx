@@ -99,7 +99,12 @@ export default function ExperiencePage() {
   ];
 
   return (
-    <PageShell currentPath="/experience" mainClassName="pageMain start">
+    <PageShell
+      currentPath="/experience"
+      pageClassName="experiencePage"
+      gridClassName="experienceGrid"
+      mainClassName="start"
+    >
       <section className="window experienceWindow noWindowLift">
         <div className="windowTop">
           <div className="windowTopLeft">
@@ -119,4 +124,3 @@ export default function ExperiencePage() {
     </PageShell>
   );
 }
-

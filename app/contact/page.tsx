@@ -12,7 +12,7 @@ export default function ContactPage() {
               <div className="dot yellow"></div>
               <div className="dot green"></div>
             </div>
-            <strong>connect.exe</strong>
+            <strong>reachme.exe</strong>
           </div>
         </div>
 

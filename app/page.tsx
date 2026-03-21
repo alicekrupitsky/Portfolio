@@ -5,7 +5,7 @@ import AliceHeadShot from "@/app/AliceHeadShot.jpg";
 export default function Home() {
   return (
     <PageShell currentPath="/" headerContent={<SiteHeaderTitles />}>
-      <section className="window">
+      <section className="window noWindowLift">
         <div className="windowTop">
           <div className="windowTopLeft">
             <div className="dots">
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="windowBody">
           <div className="aboutContent">
             <aside className="aboutPhotoWrap">
-                  <div className="aboutPhotoWindow noPhotoLift">
+                  <div className="aboutPhotoWindow">
                 <div className="aboutPhotoTop">
                   <div className="aboutPhotoTopLeft">
                     <div className="dots aboutPhotoDots">
@@ -82,6 +82,4 @@ export default function Home() {
     </PageShell>
   );
 }
-
-
 

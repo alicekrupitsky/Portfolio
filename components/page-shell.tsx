@@ -8,6 +8,8 @@ import SiteHeaderTitles from "@/components/ui/site-header-titles";
 type PageShellProps = {
   currentPath: string;
   headerContent?: React.ReactNode;
+  pageClassName?: string;
+  gridClassName?: string;
   mainClassName?: string;
   children: React.ReactNode;
 };
@@ -15,11 +17,13 @@ type PageShellProps = {
 export default function PageShell({
   currentPath,
   headerContent,
+  pageClassName = "",
+  gridClassName = "",
   mainClassName = "",
   children,
 }: PageShellProps) {
   return (
-    <div className="page">
+    <div className={`page ${pageClassName}`.trim()}>
       <div className="headerWindow">
         <div className="headerTop">
           <div className="dots">
@@ -39,7 +43,7 @@ export default function PageShell({
         </div>
       </div>
 
-      <div className="grid">
+      <div className={`grid ${gridClassName}`.trim()}>
         <Nav currentPath={currentPath} />
 
         <main className={`pageMain ${mainClassName}`.trim()}>

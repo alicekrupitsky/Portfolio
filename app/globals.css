@@ -1231,7 +1231,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 10px 17px;
+  padding: 10px 13px;
   border-width: 2px;
   border-style: solid;
   border-color: var(--green2);
@@ -1243,7 +1243,7 @@ a:hover {
     0 3px 0 var(--green2),
     0 6px 12px var(--color-surface-shadow);
   border-radius: 8px;
-  padding-inline: 17px;
+  padding-inline: 13px;
   font-size: 22px;
   line-height: 1.1;
   text-align: center;

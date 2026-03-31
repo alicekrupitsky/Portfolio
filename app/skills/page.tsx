@@ -2,15 +2,19 @@
 
 import PageShell from "@/components/page-shell";
 import ShimmerButton from "@/components/ui/shimmer-button";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
-const SKILL_WIDTH = 140;
 const SKILL_HEIGHT = 50;
 const DRAG_VELOCITY_SCALE = 25;
 const DRAG_PUSH_MULTIPLIER = 0.55;
 const MIN_PUSH_SPEED = 0.9;
 const DRAG_CONTACT_THRESHOLD = 16;
 const SEPARATION_BOUNCE = 0.35;
+const IMPACT_TRANSFER = 0.82;
+const IMPACT_DAMPING = 0.45;
+const REST_SPEED_EPSILON = 0.18;
+const ACTIVE_IMPACT_SPEED = 0.75;
+const COLLISION_PASSES = 1;
 
 const SKILLS = [
   "Python",
@@ -81,10 +85,15 @@ type SkillState = {
   y: number;
   vx: number;
   vy: number;
+  width: number;
 };
 
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(value, max));
+}
+
+function getSkillWidth(name: string) {
+  return Math.max(48, Math.round(name.length * 10 + 8));
 }
 
 function separateSkills(
@@ -95,14 +104,14 @@ function separateSkills(
 ) {
   const next = skills.map((skill) => ({ ...skill }));
 
-  for (let iteration = 0; iteration < 2; iteration += 1) {
+  for (let iteration = 0; iteration < COLLISION_PASSES; iteration += 1) {
     for (let i = 0; i < next.length; i += 1) {
       for (let j = i + 1; j < next.length; j += 1) {
         const a = next[i];
         const b = next[j];
 
         const overlapX =
-          Math.min(a.x + SKILL_WIDTH, b.x + SKILL_WIDTH) - Math.max(a.x, b.x);
+          Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x);
         const overlapY =
           Math.min(a.y + SKILL_HEIGHT, b.y + SKILL_HEIGHT) - Math.max(a.y, b.y);
 
@@ -113,30 +122,78 @@ function separateSkills(
 
         if (overlapX < overlapY) {
           const direction = a.x <= b.x ? 1 : -1;
-          const separation = overlapX / (aDragged || bDragged ? 1 : 2);
+          const totalSeparation = overlapX;
+          const separation = aDragged || bDragged ? totalSeparation : totalSeparation / 2;
+          const aSpeed = Math.abs(a.vx);
+          const bSpeed = Math.abs(b.vx);
 
           if (!aDragged) {
-            a.x = clamp(a.x - direction * separation, 0, width - SKILL_WIDTH);
-            a.vx = -direction * Math.max(Math.abs(a.vx) * SEPARATION_BOUNCE, 0.4);
+            a.x = clamp(a.x - direction * separation, 0, width - a.width);
           }
 
           if (!bDragged) {
-            b.x = clamp(b.x + direction * separation, 0, width - SKILL_WIDTH);
-            b.vx = direction * Math.max(Math.abs(b.vx) * SEPARATION_BOUNCE, 0.4);
+            b.x = clamp(b.x + direction * separation, 0, width - b.width);
           }
+
+          if (aDragged || bDragged) {
+            if (!aDragged && aSpeed < REST_SPEED_EPSILON) {
+              a.vx = 0;
+            }
+            if (!bDragged && bSpeed < REST_SPEED_EPSILON) {
+              b.vx = 0;
+            }
+          } else if (aSpeed >= ACTIVE_IMPACT_SPEED || bSpeed >= ACTIVE_IMPACT_SPEED) {
+            if (aSpeed >= bSpeed) {
+              a.vx *= IMPACT_DAMPING;
+              b.vx = direction * Math.max(aSpeed * IMPACT_TRANSFER, 0.6);
+            } else {
+              b.vx *= IMPACT_DAMPING;
+              a.vx = -direction * Math.max(bSpeed * IMPACT_TRANSFER, 0.6);
+            }
+          } else {
+            a.vx = 0;
+            b.vx = 0;
+          }
+
+          if (Math.abs(a.vx) < REST_SPEED_EPSILON) a.vx = 0;
+          if (Math.abs(b.vx) < REST_SPEED_EPSILON) b.vx = 0;
         } else {
           const direction = a.y <= b.y ? 1 : -1;
-          const separation = overlapY / (aDragged || bDragged ? 1 : 2);
+          const totalSeparation = overlapY;
+          const separation = aDragged || bDragged ? totalSeparation : totalSeparation / 2;
+          const aSpeed = Math.abs(a.vy);
+          const bSpeed = Math.abs(b.vy);
 
           if (!aDragged) {
             a.y = clamp(a.y - direction * separation, 0, height - SKILL_HEIGHT);
-            a.vy = -direction * Math.max(Math.abs(a.vy) * SEPARATION_BOUNCE, 0.3);
           }
 
           if (!bDragged) {
             b.y = clamp(b.y + direction * separation, 0, height - SKILL_HEIGHT);
-            b.vy = direction * Math.max(Math.abs(b.vy) * SEPARATION_BOUNCE, 0.3);
           }
+
+          if (aDragged || bDragged) {
+            if (!aDragged && aSpeed < REST_SPEED_EPSILON) {
+              a.vy = 0;
+            }
+            if (!bDragged && bSpeed < REST_SPEED_EPSILON) {
+              b.vy = 0;
+            }
+          } else if (aSpeed >= ACTIVE_IMPACT_SPEED || bSpeed >= ACTIVE_IMPACT_SPEED) {
+            if (aSpeed >= bSpeed) {
+              a.vy *= IMPACT_DAMPING;
+              b.vy = direction * Math.max(aSpeed * IMPACT_TRANSFER, SEPARATION_BOUNCE);
+            } else {
+              b.vy *= IMPACT_DAMPING;
+              a.vy = -direction * Math.max(bSpeed * IMPACT_TRANSFER, SEPARATION_BOUNCE);
+            }
+          } else {
+            a.vy = 0;
+            b.vy = 0;
+          }
+
+          if (Math.abs(a.vy) < REST_SPEED_EPSILON) a.vy = 0;
+          if (Math.abs(b.vy) < REST_SPEED_EPSILON) b.vy = 0;
         }
       }
     }
@@ -145,7 +202,7 @@ function separateSkills(
   return next;
 }
 
-function CertificationsWindow() {
+const CertificationsWindow = memo(function CertificationsWindow() {
   const [activeCertId, setActiveCertId] = useState("");
 
   return (
@@ -213,7 +270,7 @@ function CertificationsWindow() {
       </div>
     </section>
   );
-}
+});
 
 function SkillsWindow() {
   const [isSandbox, setIsSandbox] = useState(false);
@@ -224,6 +281,7 @@ function SkillsWindow() {
       y: Math.random() * 50,
       vx: 0,
       vy: 0,
+      width: getSkillWidth(skill),
     }))
   );
 
@@ -258,8 +316,8 @@ function SkillsWindow() {
             x = 0;
             vx *= -0.7;
           }
-          if (x + SKILL_WIDTH > width) {
-            x = width - SKILL_WIDTH;
+          if (x + skill.width > width) {
+            x = width - skill.width;
             vx *= -0.7;
           }
           if (y < 0) {
@@ -299,6 +357,11 @@ function SkillsWindow() {
         y: e.clientY - rect.top - skill.y,
       };
       lastPosRef.current = { x: skill.x, y: skill.y, t: e.timeStamp };
+      setSkillsState((prev) =>
+        prev.map((entry) =>
+          entry.name === skillName ? { ...entry, vx: 0, vy: 0 } : entry
+        )
+      );
     }
   };
 
@@ -306,9 +369,11 @@ function SkillsWindow() {
     if (!draggedRef.current || !containerRef.current) return;
 
     const rect = containerRef.current.getBoundingClientRect();
+    const draggedSkill = skillsState.find((skill) => skill.name === draggedRef.current);
+    if (!draggedSkill) return;
     const nx = Math.max(
       0,
-      Math.min(e.clientX - rect.left - offsetRef.current.x, rect.width - SKILL_WIDTH)
+      Math.min(e.clientX - rect.left - offsetRef.current.x, rect.width - draggedSkill.width)
     );
     const ny = Math.max(
       0,
@@ -343,7 +408,7 @@ function SkillsWindow() {
         if (skill.name === draggedSkill.name) continue;
 
         const overlapX =
-          Math.min(draggedSkill.x + SKILL_WIDTH, skill.x + SKILL_WIDTH) -
+          Math.min(draggedSkill.x + draggedSkill.width, skill.x + skill.width) -
           Math.max(draggedSkill.x, skill.x);
         const overlapY =
           Math.min(draggedSkill.y + SKILL_HEIGHT, skill.y + SKILL_HEIGHT) -
@@ -361,7 +426,7 @@ function SkillsWindow() {
           skill.x = clamp(
             skill.x + pushDirection * (overlapX - DRAG_CONTACT_THRESHOLD),
             0,
-            rect.width - SKILL_WIDTH
+            rect.width - skill.width
           );
           skill.vx =
             pushDirection *
@@ -396,6 +461,7 @@ function SkillsWindow() {
           y: Math.random() * 100,
           vx: (Math.random() - 0.5) * 3,
           vy: (Math.random() - 0.5) * 3,
+          width: getSkillWidth(skill),
         }))
       );
     }

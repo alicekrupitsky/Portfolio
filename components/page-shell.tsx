@@ -1,9 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
 import Nav from "@/components/nav";
 import SiteNameLink from "@/components/ui/site-name-link";
-import SiteHeaderTitles from "@/components/ui/site-header-titles";
 
 type PageShellProps = {
   currentPath: string;

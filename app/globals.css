@@ -857,17 +857,17 @@ a:hover {
 }
 
 .inlineLink {
-  color: var(--green2);
+  color: var(--accent);
   font-weight: 400;
   text-decoration: underline;
-  text-decoration-color: rgba(121, 161, 93, 0.9);
+  text-decoration-color: color-mix(in srgb, var(--accent) 72%, transparent);
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .inlineLink:hover,
 .inlineLink:focus-visible {
-  color: var(--green);
-  text-decoration-color: rgba(106, 143, 82, 0.95);
+  color: color-mix(in srgb, var(--accent) 78%, var(--ink) 22%);
+  text-decoration-color: var(--accent);
 }
 
 .main-title {

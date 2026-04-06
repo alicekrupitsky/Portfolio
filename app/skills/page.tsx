@@ -12,6 +12,7 @@ const DRAG_CONTACT_THRESHOLD = 16;
 const SEPARATION_BOUNCE = 0.35;
 const IMPACT_TRANSFER = 0.82;
 const IMPACT_DAMPING = 0.45;
+const DIAGONAL_PUSH_RATIO = 0.65;
 const REST_SPEED_EPSILON = 0.18;
 const ACTIVE_IMPACT_SPEED = 0.75;
 const COLLISION_PASSES = 1;
@@ -94,6 +95,24 @@ function clamp(value: number, min: number, max: number) {
 
 function getSkillWidth(name: string) {
   return Math.max(48, Math.round(name.length * 10 + 8));
+}
+
+function getSkillCenterX(skill: SkillState) {
+  return skill.x + skill.width / 2;
+}
+
+function getDiagonalPushDirection(incoming: SkillState, target: SkillState) {
+  const centerDelta = getSkillCenterX(target) - getSkillCenterX(incoming);
+
+  if (Math.abs(centerDelta) > 6) {
+    return centerDelta > 0 ? 1 : -1;
+  }
+
+  if (Math.abs(incoming.vx) > 0.1) {
+    return incoming.vx > 0 ? 1 : -1;
+  }
+
+  return 1;
 }
 
 function separateSkills(
@@ -433,14 +452,31 @@ function SkillsWindow() {
             Math.max(Math.abs(dragVx) * DRAG_PUSH_MULTIPLIER, MIN_PUSH_SPEED);
         } else {
           const pushDirection = draggedSkill.y < skill.y ? 1 : -1;
+          const diagonalDirection = getDiagonalPushDirection(draggedSkill, skill);
+          const verticalPush = Math.max(
+            Math.abs(dragVy) * DRAG_PUSH_MULTIPLIER,
+            MIN_PUSH_SPEED
+          );
+          const horizontalPush = Math.max(
+            Math.abs(dragVx) * DRAG_PUSH_MULTIPLIER,
+            verticalPush * DIAGONAL_PUSH_RATIO,
+            MIN_PUSH_SPEED
+          );
+
           skill.y = clamp(
             skill.y + pushDirection * (overlapY - DRAG_CONTACT_THRESHOLD),
             0,
             rect.height - SKILL_HEIGHT
           );
-          skill.vy =
-            pushDirection *
-            Math.max(Math.abs(dragVy) * DRAG_PUSH_MULTIPLIER, MIN_PUSH_SPEED);
+          skill.x = clamp(
+            skill.x +
+              diagonalDirection *
+                Math.max((overlapX - DRAG_CONTACT_THRESHOLD) * DIAGONAL_PUSH_RATIO, 0),
+            0,
+            rect.width - skill.width
+          );
+          skill.vy = pushDirection * verticalPush;
+          skill.vx = diagonalDirection * horizontalPush;
         }
       }
 

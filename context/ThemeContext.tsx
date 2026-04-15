@@ -17,7 +17,7 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [activeTheme, setActiveTheme] = useState<ThemeName>("green");
+  const [activeTheme, setActiveTheme] = useState<ThemeName>("blue");
 
   useEffect(() => {
     const root = document.documentElement;

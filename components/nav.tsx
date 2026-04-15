@@ -15,9 +15,9 @@ const navItems = [
 ] as const;
 
 const themeOptions: Array<{ name: ThemeName; label: string }> = [
-  { name: "green", label: "Green" },
-  { name: "purple", label: "Purple" },
   { name: "blue", label: "Blue" },
+  { name: "purple", label: "Purple" },
+  { name: "green", label: "Green" },
 ];
 
 function PaintBucketIcon({

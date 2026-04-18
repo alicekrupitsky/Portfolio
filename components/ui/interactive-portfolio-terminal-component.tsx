@@ -215,6 +215,7 @@ export default function PortfolioTerminal() {
 
   Feel free to reach out for opportunities, collaborations, or just a chat!
 `,
+    yo: () => `yo`,
     hi: () => `Hi! :D`,
     boo: () => {
       setTheme("bloodmoon")

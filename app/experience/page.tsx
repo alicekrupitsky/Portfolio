@@ -2,6 +2,11 @@
 
 import PageShell from "@/components/page-shell";
 import Timeline3D, { type TimelineEvent } from "@/components/ui/3d-interactive-timeline";
+import mathnasiumLogo from "@/app/Mathnasium_Logo.jpg";
+import goldenEggCafePic from "@/app/goldeneggcafe.jpg";
+import solvLogo from "@/app/SolvLogo.jpg";
+import swampRecordsPic from "@/app/srpic.jpg";
+import ufcsuLogo from "@/app/ufcsulogo.png";
 import {
   BriefcaseBusiness,
   Building2,
@@ -22,6 +27,11 @@ export default function ExperiencePage() {
       category: "Leadership",
       color: "#79a15d",
       location: "Gainesville, FL",
+      mediaWindow: {
+        src: ufcsuLogo.src,
+        alt: "UF Computing Student Union logo",
+        label: "ufcsu.png",
+      },
       bullets: [
         "Lead event promotion across Instagram, announcements, and weekly timelines.",
         "Coordinate with leadership and event teams to keep messaging and timing aligned.",
@@ -36,6 +46,12 @@ export default function ExperiencePage() {
       category: "Development",
       color: "#9670aa",
       location: "Gainesville, FL | Part-time",
+      mediaWindow: {
+        src: swampRecordsPic.src,
+        alt: "Swamp Records preview",
+        label: "DevTeamGroupPic.jpg",
+      },
+      mediaPlacement: "bottom",
       bullets: [
         "Build and maintain artist-facing web features using React, Next.js, and TypeScript, deployed via Vercel.",
         "Partner with teammates to translate requirements into usable UI, balancing design, accessibility, and performance.",
@@ -50,6 +66,11 @@ export default function ExperiencePage() {
       category: "Analytics",
       color: "#5c93bd",
       location: "Gainesville, FL | Part-time",
+      mediaWindow: {
+        src: solvLogo.src,
+        alt: "SOLV Digital logo",
+        label: "SolvLogo.jpg",
+      },
       bullets: [
         "Analyze engagement metrics and user behavior data to optimize content strategy across digital platforms.",
         "Translate insights into recommendations with cross-functional teams; communicate results clearly to stakeholders.",
@@ -64,6 +85,11 @@ export default function ExperiencePage() {
       category: "Brand Growth",
       color: "#db8078",
       location: "Tampa, FL | Part-time",
+      mediaWindow: {
+        src: goldenEggCafePic.src,
+        alt: "Golden Egg Cafe content preview",
+        label: "GEcafe.jpg",
+      },
       bullets: [
         "Increased account reach by 190% through data-informed content strategy and platform optimization.",
         "Designed branded visual content using photography and Canva to maintain consistent visual identity.",
@@ -78,6 +104,12 @@ export default function ExperiencePage() {
       category: "Education",
       color: "#e7c87a",
       location: "Tampa, FL",
+      mediaWindow: {
+        src: mathnasiumLogo.src,
+        alt: "Mathnasium logo",
+        label: "MathnasiumLogo.jpg",
+      },
+      mediaPlacement: "bottom",
       bullets: [
         "Delivered personalized tutoring for K–12 students across different pacing and learning styles.",
         "Supported an average score improvement of ~30% across students.",

@@ -193,14 +193,34 @@ export default function PortfolioTerminal() {
        framing to improve response over time
      - Built a repeatable content system guided by performance metrics
 
-  5. Tetris
+  5. QuantHacks Website
+     Sole Designer and Developer | Mar 2026
+     https://www.gqhacks.com/
+     - Designed and built the QuantHacks website solo, translating
+       Figma mockups into a responsive React and Next.js experience
+     - Refined the site through multiple feedback rounds before launch,
+       tightening layout, copy, and interaction details
+     - Created custom animations and handled SEO improvements to make
+       the site feel polished and easier to discover
+
+  6. Wawa Consumer Insights Study
+     Research Lead | Digital Insights, University of Florida | Mar 2026
+     /wawa-consumer-insights-study.pdf
+     - Designed and executed a branching survey, distributing it to
+       600+ respondents and qualifying 54 for deeper analysis
+     - Analyzed response data to uncover three distinct audience groups
+       and translate behavioral patterns into usable insights
+     - Built a data-driven persona that shaped the team's strategic
+       recommendations for Wawa
+
+  7. Tetris
      Python + Pygame | Jan 2026
      https://github.com/alicekrupitsky/Tetris
      - Built an executable Tetris game using Python and Pygame
      - Features scoring and leveling with increasing speed, wall kicks,
        and pause/restart controls
 
-  6. Website for David D. Friedman
+  8. Website for David D. Friedman
      Frontend Development | Mar 2020
      http://www.daviddfriedman.com/
      - Designed and launched a client website, building early

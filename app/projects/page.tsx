@@ -97,7 +97,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="projectTagRow">
-                <span className="projectTag">Product UX</span>
+                <span className="projectTag">UI/UX</span>
                 <span className="projectTag">3D Visualization</span>
                 <span className="projectTag">Real-Time Collaboration</span>
               </div>
@@ -165,6 +165,65 @@ export default function ProjectsPage() {
               <li>Mapped the Instagram-to-platform funnel to show exactly where discovery stopped converting into product usage.</li>
               <li>Identified profile visit to link click as the key bottleneck, which clarified where growth experiments should focus first.</li>
               <li>Used trend and KPI analysis to distinguish one-time spikes from sustained engagement and guide next-step product and marketing decisions.</li>
+            </ul>
+          </ProjectWindow>
+
+          <ProjectWindow title="QuantHacks Website">
+            <div className="projectSectionSubheading">
+              <a
+                href="https://www.gqhacks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectTitleLink"
+              >
+                <span>Visit Site</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </a>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText">Designer & Developer | Mar 2026</span>
+            </div>
+
+            <div className="projectTagRow">
+              <span className="projectTag">React</span>
+              <span className="projectTag">Next.js</span>
+              <span className="projectTag">Figma</span>
+              <span className="projectTag">SEO</span>
+            </div>
+            <ul>
+              <li>Designed and built the QuantHacks website solo, translating Figma mockups into a responsive React and Next.js experience.</li>
+              <li>Refined the site through multiple feedback rounds before launch, tightening layout, copy, and interaction details.</li>
+              <li>Created custom animations and handled SEO improvements to make the site feel polished and easier to discover.</li>
+            </ul>
+          </ProjectWindow>
+
+          <ProjectWindow title="Wawa Consumer Insights Study">
+            <div className="projectSectionSubheading">
+              <a
+                href="/wawa-consumer-insights-study.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectTitleLink"
+              >
+                <span>Download Presentation</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </a>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText">Research Lead | Digital Insights, University of Florida | Mar 2026</span>
+            </div>
+
+            <div className="projectTagRow">
+              <span className="projectTag">Consumer Research</span>
+              <span className="projectTag">Survey Design</span>
+              <span className="projectTag">Audience Segmentation</span>
+            </div>
+            <ul>
+              <li>Designed and executed a branching survey, distributing it to 600+ respondents and qualifying 54 for deeper analysis.</li>
+              <li>Analyzed response data to translate behavioral patterns into usable insights.</li>
+              <li>Built a data-driven persona that shaped the team's strategic recommendations for Wawa.</li>
             </ul>
           </ProjectWindow>
 

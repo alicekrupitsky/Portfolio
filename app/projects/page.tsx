@@ -270,7 +270,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="projectTagRow">
-                <span className="projectTag">Social Strategy</span>
+                <span className="projectTag">Content Strategy</span>
                 <span className="projectTag">Creative Testing</span>
                 <span className="projectTag">Audience Messaging</span>
               </div>

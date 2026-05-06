@@ -63,17 +63,31 @@ export default function Nav({ currentPath }: { currentPath: string }) {
   return (
     <aside className="navWrap">
       <div className="navCard">
-        <div className="navTitle">NAV</div>
+        <div className="navWindowTop">
+          <div className="dots">
+            <div className="dot red"></div>
+            <div className="dot yellow"></div>
+            <div className="dot green"></div>
+          </div>
+          <strong>Navigation</strong>
+        </div>
         <div className="navGrid">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`navBtn${currentPath === item.href ? " active" : ""}`}
-            >
-              <strong>{item.label}</strong>
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive =
+              currentPath === item.href ||
+              (item.href !== "/" && currentPath.startsWith(`${item.href}/`));
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`navBtn${isActive ? " active" : ""}`}
+                aria-current={isActive ? "page" : undefined}
+              >
+                <strong>{item.label}</strong>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="navTitle themeTitle">THEME</div>
@@ -95,29 +109,6 @@ export default function Nav({ currentPath }: { currentPath: string }) {
               />
             </button>
           ))}
-        </div>
-
-        <div className="quickLinksCard">
-          <div className="quickLinksTitle">Quick Links</div>
-          <div className="quickLinksRow">
-            <a href="mailto:akrupitsky@ufl.edu">Email</a>
-            <span className="quickLinksDivider">|</span>
-            <a
-              href="https://www.linkedin.com/in/alicekrupitsky"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <span className="quickLinksDivider">|</span>
-            <a
-              href="https://github.com/alicekrupitsky"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
         </div>
       </div>
     </aside>

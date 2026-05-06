@@ -53,18 +53,24 @@ export default function PortfolioTerminal() {
   School:   University of Florida
   Based in: Tampa / Gainesville, FL
 
-  Third-year student studying Advertising with a minor in Computer
-  Science and an AI Fundamentals Certificate. Instinctively drawn to
-  creativity, while also deeply interested in the technology and data
-  behind the scenes.
+  Third-year Advertising student at UF with a minor in Computer
+  Science and an AI Fundamentals Certificate. Drawn to bold creative
+  work and the data, psychology, and technology behind what makes it
+  effective.
 
-  Grew up in a Russian household in Tampa - multilingual, curious about
-  culture, language, and how people interpret meaning. That awareness
-  shapes how I think about audiences, messaging, and brand identity.
+  Growing up in a Russian household in Tampa got me thinking early
+  about how much communication matters. The same message can land
+  completely differently depending on who's hearing it, and that still
+  shapes how I approach audiences, messaging, and branding.
 
-  Long-term goal: blend brand strategy, content creation, and
-  emerging technology. Data-driven creativity - intuition sparks ideas,
-  analytics makes them strong.
+  I learned HTML and CSS when I was 13 and never really stopped.
+  Outside of school, I enjoy language learning, writing, going down
+  psychology rabbit holes, and exploring fashion and visual design.
+
+  Long term, I want to work on products where brand, data, and user
+  experience all come together. I like being close to the decisions,
+  understanding what works, and figuring out why people respond the
+  way they do.
 `,
     skills: () => `
 [SKILLS]

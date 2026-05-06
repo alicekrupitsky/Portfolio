@@ -18,9 +18,9 @@ export default function Home() {
         </div>
 
         <div className="windowBody">
-          <div className="aboutContent">
-            <aside className="aboutPhotoWrap">
-                  <div className="aboutPhotoWindow">
+          <div className="aboutContent homeAboutContent">
+            <aside className="aboutPhotoWrap homeAboutPhotoWrap">
+              <div className="aboutPhotoWindow">
                 <div className="aboutPhotoTop">
                   <div className="aboutPhotoTopLeft">
                     <div className="dots aboutPhotoDots">
@@ -43,38 +43,32 @@ export default function Home() {
               </div>
             </aside>
 
-            <div className="bigTitle homeTitle">Welcome to my portfolio!</div>
-
             <p>
-              Hi, I&apos;m Alice Krupitsky, a third-year student at the
-              University of Florida studying Advertising with a minor in
-              Computer Science and an AI Fundamentals Certificate.
-              I&apos;m instinctively drawn to creativity, while also deeply
-              interested in the technology and data behind the scenes.
+              Hi, I&apos;m Alice Krupitsky, a third-year Advertising student
+              at UF with a minor in Computer Science and an AI Fundamentals
+              Certificate. I&apos;m drawn to bold creative work and the data,
+              psychology, and technology behind what makes it effective.
             </p>
 
             <p>
-              I grew up in a Russian household in Tampa, which shaped my
-              curiosity about culture, language, and communication.
-              I&apos;m fascinated by how different perspectives influence the
-              way people interpret meaning, and I bring that awareness into
-              how I think about audiences, messaging, and brand identity.
+              Growing up in a Russian household in Tampa got me thinking early
+              about how much communication matters. The same message can land
+              completely differently depending on who&apos;s hearing it, and
+              that still shapes how I approach audiences, messaging, and
+              branding.
             </p>
 
             <p>
-              Outside of work and school, I spend time learning languages,
-              coding, writing, exploring fashion and visual design, and
-              studying psychology. I&apos;m drawn to disciplines that explain
-              how people think, create, and connect.
+              I learned HTML and CSS when I was 13 and never really stopped.
+              Outside of school, I enjoy language learning, writing, going down
+              psychology rabbit holes, and exploring fashion and visual design.
             </p>
 
             <p>
-              My long-term goal is to build a career that blends brand
-              strategy, content creation, and emerging technology. My
-              advertising philosophy centers on data-driven creativity:
-              intuition sparks ideas, but meaningful communication is
-              strongest when storytelling is supported by analytics and
-              intentional strategy.
+              Long term, I want to work on products where brand, data, and
+              user experience all come together. I like being close to the
+              decisions, understanding what works, and figuring out why people
+              respond the way they do.
             </p>
           </div>
         </div>

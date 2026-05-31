@@ -190,7 +190,17 @@ export default function PortfolioTerminal() {
      - Used trend and KPI analysis to separate one-time spikes from
        sustained engagement and guide next-step decisions
 
-  4. Golden Egg Cafe Instagram Content
+  4. Gen Z Brand Reputation Research and Presentation
+     Team Lead and Spokesperson | UF CJCxNYC PR and Ad Week | Burson NYC | May 2026
+     /projects/gen-z-brand-reputation-strategy
+     - Volunteered as team lead and coordinated direction under a
+       compressed one-week deadline
+     - Served as the primary spokesperson during the final presentation
+       to professionals at Burson's New York office
+     - Refined the presentation narrative so complex research and
+       strategic implications were clear, polished, and persuasive
+
+  5. Golden Egg Cafe Instagram Content
      Content Strategy + Performance Review | Ongoing
      https://www.instagram.com/golden.eggcafe/
      - Used post-level data to plan campaigns around seasonal demand
@@ -199,7 +209,7 @@ export default function PortfolioTerminal() {
        framing to improve response over time
      - Built a repeatable content system guided by performance metrics
 
-  5. QuantHacks Website
+  6. QuantHacks Website
      Sole Designer and Developer | Mar 2026
      https://www.gqhacks.com/
      - Designed and built the QuantHacks website solo, translating
@@ -209,7 +219,7 @@ export default function PortfolioTerminal() {
      - Created custom animations and handled SEO improvements to make
        the site feel polished and easier to discover
 
-  6. Wawa Consumer Insights Study
+  7. Wawa Consumer Insights Study
      Research Lead | Digital Insights, University of Florida | Mar 2026
      /wawa-consumer-insights-study.pdf
      - Designed and executed a branching survey, distributing it to
@@ -219,14 +229,14 @@ export default function PortfolioTerminal() {
      - Built a data-driven persona that shaped the team's strategic
        recommendations for Wawa
 
-  7. Tetris
+  8. Tetris
      Python + Pygame | Jan 2026
      https://github.com/alicekrupitsky/Tetris
      - Built an executable Tetris game using Python and Pygame
      - Features scoring and leveling with increasing speed, wall kicks,
        and pause/restart controls
 
-  8. Website for David D. Friedman
+  9. Website for David D. Friedman
      Frontend Development | Mar 2020
      http://www.daviddfriedman.com/
      - Designed and launched a client website, building early

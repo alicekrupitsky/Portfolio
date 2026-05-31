@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import RealismButton from "@/components/ui/shiny-borders-button";
 import neuroviewpic from "@/app/neuroviewpic.jpg";
 import goldeneggcafe from "@/app/goldeneggcafe.jpg";
+import cjcNycGroupPic from "@/app/CJCxNYCgroupPic.jpg";
 
 function ProjectWindow({
   title,
@@ -144,6 +145,55 @@ export default function ProjectsPage() {
             </ul>
           </ProjectWindow>
 
+          <ProjectWindow title="Gen Z Brand Reputation Research & Presentation">
+            <div className="projectSectionSubheading">
+              <Link href="/projects/gen-z-brand-reputation-strategy" className="projectTitleLink">
+                <span>View Case Study</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </Link>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText projectCardRoleText">Team Lead &amp; Spokesperson | UF CJCxNYC PR &amp; Ad Week | Burson NYC | May 2026</span>
+            </div>
+
+            <div className="aboutContent">
+              <div className="aboutPhotoWrap projectCardGroupPhotoWrap" style={{ marginTop: "10px" }}>
+                <div className="aboutPhotoWindow">
+                  <div className="aboutPhotoTop">
+                    <div className="aboutPhotoTopLeft">
+                      <div className="dots aboutPhotoDots">
+                        <div className="dot red"></div>
+                        <div className="dot yellow"></div>
+                        <div className="dot green"></div>
+                      </div>
+                      <span>CJCxNYCgroupPic.jpg</span>
+                    </div>
+                  </div>
+                  <div className="aboutPhotoBody">
+                    <div className="aboutPhotoFrame">
+                      <img
+                        src={cjcNycGroupPic.src}
+                        alt="CJCxNYC team at Burson"
+                        className="aboutPhotoImg projectCardGroupPhotoImg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="projectTagRow">
+                <span className="projectTag">Leadership</span>
+                <span className="projectTag">Consumer Research</span>
+                <span className="projectTag">Brand Strategy</span>
+              </div>
+              <ul>
+                <li>Led a team in researching how Gen Z responds to brand controversy, developing a strategic framework on reputation, loyalty, and public criticism. Presented findings as team spokesperson at Burson&apos;s New York office.</li>
+                <li>Presented a research-backed strategy presentation to industry professionals in the World Trade Center.</li>
+              </ul>
+            </div>
+          </ProjectWindow>
+
           <ProjectWindow title="Museboard Growth & Conversion Analysis">
             <div className="projectSectionSubheading">
               <Link href="/projects/museboard-growth-conversion-analysis" className="projectTitleLink">
@@ -223,7 +273,7 @@ export default function ProjectsPage() {
             <ul>
               <li>Designed and executed a branching survey, distributing it to 600+ respondents and qualifying 54 for deeper analysis.</li>
               <li>Analyzed response data to translate behavioral patterns into usable insights.</li>
-              <li>Built a data-driven persona that shaped the team's strategic recommendations for Wawa.</li>
+              <li>Built a data-driven persona that shaped the team&apos;s strategic recommendations for Wawa.</li>
             </ul>
           </ProjectWindow>
 

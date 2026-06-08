@@ -78,10 +78,10 @@ export default function PortfolioTerminal() {
   Technical:
     Python | C++ | C# | JavaScript | TypeScript | HTML/CSS | SQL
     React | Next.js | Git and GitHub | Vercel | Bootstrap | Power BI | Excel
-    UI/UX Design | Figma | LaTeX
+    UI/UX Design | Wireframing | Figma | LaTeX
 
   Creative and Marketing:
-    Digital Marketing | Adobe Creative Suite | Canva
+    Digital Marketing | Account Management | Adobe Creative Suite | Canva
     Russian (conversational)
 
   Certifications:
@@ -106,14 +106,14 @@ export default function PortfolioTerminal() {
   - Coordinate with leadership and event teams to keep
     messaging and timing aligned
 
-  Nov 2025 - Present | Associate
-  SOLV Digital | Gainesville, FL | Part-time
-  - Build content strategies from performance data across
-    reach, engagement, and interaction trends
-  - Turn weekly analytics into clear campaign decisions on
-    messaging, format, and publishing cadence
-  - Partner with cross-functional teams to convert insights
-    into actionable recommendations
+  Nov 2025 - Present | Account Manager & Data Strategist
+  SOLV Digital | Gainesville, FL
+  - Lead client relationships end-to-end, scoping deliverables,
+    setting timelines, and translating business goals into
+    data-driven content and growth strategy
+  - Built a Power BI funnel analysis that identified a key
+    acquisition drop-off point, directly informing adjustments
+    to content strategy and product direction
 
   Jan 2026 - Present | Web Developer
   Swamp Records | Gainesville, FL | Part-time

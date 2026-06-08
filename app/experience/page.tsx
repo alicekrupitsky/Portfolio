@@ -60,20 +60,20 @@ export default function ExperiencePage() {
     {
       id: "solv",
       date: "Nov 2025 – Present",
-      title: "Associate - SOLV Digital",
+      title: "Account Manager & Data Strategist - SOLV Digital",
       description: "",
       icon: <Presentation className="h-5 w-5" />,
       category: "Analytics",
       color: "#5c93bd",
-      location: "Gainesville, FL | Part-time",
+      location: "Gainesville, FL",
       mediaWindow: {
         src: solvLogo.src,
         alt: "SOLV Digital logo",
         label: "SolvLogo.jpg",
       },
       bullets: [
-        "Analyze engagement metrics and user behavior data to optimize content strategy across digital platforms.",
-        "Translate insights into recommendations with cross-functional teams; communicate results clearly to stakeholders.",
+        "Lead client relationships end-to-end, scoping deliverables, setting timelines, and translating business goals into data-driven content and growth strategy.",
+        "Built a Power BI funnel analysis that identified a key acquisition drop-off point, directly informing adjustments to content strategy and product direction.",
       ],
     },
     {

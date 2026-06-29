@@ -42,7 +42,7 @@ const impact = [
 export default function GenZBrandReputationStrategyPage() {
   return (
     <PageShell currentPath="/projects">
-      <section className="window">
+      <section className="window noWindowLift">
         <div className="windowTop">
           <div className="windowTopLeft">
             <div className="dots">
@@ -70,7 +70,7 @@ export default function GenZBrandReputationStrategyPage() {
           </p>
 
           <div className="caseStudyCoverPhotoWrap">
-            <div className="aboutPhotoWindow noPhotoLift">
+            <div className="aboutPhotoWindow">
               <div className="aboutPhotoTop">
                 <div className="aboutPhotoTopLeft">
                   <div className="dots aboutPhotoDots">

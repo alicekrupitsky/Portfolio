@@ -107,6 +107,7 @@ export function Timeline3D({
                       className={cn(
                         "experienceTimelineMediaWrap",
                         "is-wrap",
+                        event.id === "beachlens" && "is-beachlens",
                         event.id === "solv" && "is-solv",
                         event.id === "golden-egg" && "is-golden-egg"
                       )}

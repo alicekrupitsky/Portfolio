@@ -7,10 +7,12 @@ import goldenEggCafePic from "@/app/goldeneggcafe.jpg";
 import solvLogo from "@/app/SolvLogo.jpg";
 import swampRecordsPic from "@/app/srpic.jpg";
 import ufcsuLogo from "@/app/ufcsulogo.png";
+import beachLensLogo from "@/app/beachLensLogo.png";
 import {
   BriefcaseBusiness,
   Building2,
   Code2,
+  Database,
   Megaphone,
   Presentation,
   School,
@@ -18,6 +20,25 @@ import {
 
 export default function ExperiencePage() {
   const timelineEvents: TimelineEvent[] = [
+    {
+      id: "beachlens",
+      date: "2026 - Present",
+      title: "Data Engineering Intern - BeachLens",
+      description: "",
+      icon: <Database className="h-5 w-5" />,
+      category: "Data Engineering",
+      color: "#4f9f91",
+      location: "Gainesville, FL",
+      mediaWindow: {
+        src: beachLensLogo.src,
+        alt: "BeachLens logo",
+        label: "BeachLens.png",
+      },
+      bullets: [
+        "Develop Python ETL pipelines that ingest, scrape, clean, and standardize beach, parking, and public access data from APIs, public datasets, and web sources.",
+        "Improve data quality by building validation and matching workflows that identify duplicates, resolve inconsistencies, and prepare structured data for the BeachLens production database.",
+      ],
+    },
     {
       id: "csu",
       date: "Jan 2026 – Present",

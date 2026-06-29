@@ -857,8 +857,6 @@ a:hover {
   border-radius: var(--ui-panel-radius);
   background: var(--soft);
   box-shadow:
-    inset 1px 1px 0 var(--color-button-inset),
-    inset -1px -1px 0 var(--color-window-divider),
     0 3px 0 var(--green2),
     0 8px 18px var(--color-surface-shadow);
   overflow: hidden;
@@ -868,23 +866,28 @@ a:hover {
 .aboutPhotoWindow:hover {
   transform: translateY(-3px);
   box-shadow:
-    inset 1px 1px 0 var(--color-button-inset),
-    inset -1px -1px 0 var(--color-window-divider),
     0 5px 0 var(--green2),
     0 12px 22px var(--color-surface-shadow-hover);
+}
+
+.aboutPhotoWindow .aboutPhotoTop,
+.experienceTimelineMediaWindow .experienceTimelineMediaTop,
+.presentationDeckWindow .presentationDeckTop {
+  box-shadow: 0 -2px 0 var(--green2);
 }
 
 .noPhotoLift:hover {
   transform: none;
   box-shadow:
-    inset 1px 1px 0 var(--color-button-inset),
-    inset -1px -1px 0 var(--color-window-divider),
     0 3px 0 var(--green2),
     0 8px 18px var(--color-surface-shadow);
 }
 
 .aboutPhotoTop {
+  position: relative;
+  width: calc(100% + 2px);
   min-height: var(--ui-titlebar-height);
+  margin: -1px -1px 0;
   padding: 8px 10px;
   display: flex;
   align-items: center;
@@ -920,7 +923,6 @@ a:hover {
 .aboutPhotoBody {
   padding: 8px;
   background: var(--soft);
-  box-shadow: inset 2px 2px 0px rgba(255,255,255,0.4), inset -2px -2px 0px rgba(0,0,0,0.2);
 }
 
 .aboutPhotoFrame {
@@ -1260,7 +1262,8 @@ a:hover {
   width: 292px;
 }
 
-.experienceTimelineMediaWrap.is-solv {
+.experienceTimelineMediaWrap.is-solv,
+.experienceTimelineMediaWrap.is-beachlens {
   margin-top: 2px;
 }
 
@@ -1273,7 +1276,8 @@ a:hover {
   padding: 6px;
 }
 
-.experienceTimelineMediaWrap.is-solv .experienceTimelineMediaBody {
+.experienceTimelineMediaWrap.is-solv .experienceTimelineMediaBody,
+.experienceTimelineMediaWrap.is-beachlens .experienceTimelineMediaBody {
   padding: 6px;
 }
 
@@ -1296,7 +1300,10 @@ a:hover {
 }
 
 .experienceTimelineMediaTop {
+  position: relative;
+  width: calc(100% + 2px);
   min-height: 28px;
+  margin: -1px -1px 0;
   padding: 4px 7px;
   display: flex;
   align-items: center;
@@ -1310,7 +1317,6 @@ a:hover {
 .experienceTimelineMediaBody {
   padding: 0;
   background: var(--soft);
-  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.35), inset -2px -2px 0 rgba(0, 0, 0, 0.14);
 }
 
 .experienceTimelineMediaImage {
@@ -2557,15 +2563,22 @@ a:hover {
   border-radius: var(--ui-panel-radius);
   background: var(--soft);
   box-shadow:
-    inset 1px 1px 0 var(--color-button-inset),
-    inset -1px -1px 0 var(--color-window-divider),
     0 3px 0 var(--green2),
     0 8px 18px var(--color-surface-shadow);
   overflow: hidden;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.presentationDeckWindow:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ui-panel-shadow-hover);
 }
 
 .presentationDeckTop {
+  position: relative;
+  width: calc(100% + 2px);
   min-height: 42px;
+  margin: -1px -1px 0;
   padding: 8px 10px;
   display: flex;
   align-items: center;
@@ -2579,7 +2592,6 @@ a:hover {
 .presentationDeckBody {
   padding: 16px 18px 18px;
   background: var(--soft);
-  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.4), inset -2px -2px 0 rgba(0,0,0,0.2);
 }
 
 .presentationDeckBody p {

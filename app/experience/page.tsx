@@ -22,7 +22,7 @@ export default function ExperiencePage() {
   const timelineEvents: TimelineEvent[] = [
     {
       id: "beachlens",
-      date: "2026 - Present",
+      date: "Jun 2026 - Present",
       title: "Data Engineering Intern - BeachLens",
       description: "",
       icon: <Database className="h-5 w-5" />,

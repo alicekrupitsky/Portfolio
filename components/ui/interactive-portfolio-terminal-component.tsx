@@ -39,7 +39,6 @@ export default function PortfolioTerminal() {
   about       -> Who I am
   skills      -> Technical and creative skills
   experience  -> Work history
-  involvement -> Campus and extracurricular
   projects    -> Selected projects
   contact     -> How to reach me
   clear       -> Clear the terminal
@@ -53,36 +52,35 @@ export default function PortfolioTerminal() {
   School:   University of Florida
   Based in: Tampa / Gainesville, FL
 
-  Third-year Advertising student at UF with a minor in Computer
-  Science and an AI Fundamentals Certificate. Drawn to bold creative
-  work and the data, psychology, and technology behind what makes it
-  effective.
+  I'm an Advertising student at UF with a minor in Computer Science and
+  an AI Fundamentals Certificate. I'm most interested in work that
+  brings together technical thinking and an understanding of people,
+  especially when it comes to figuring out what people respond to and
+  why.
 
-  Growing up in a Russian household in Tampa got me thinking early
-  about how much communication matters. The same message can land
-  completely differently depending on who's hearing it, and that still
-  shapes how I approach audiences, messaging, and branding.
+  I like being involved in different sides of a project, whether that
+  means building something, digging into data, thinking through the user
+  experience, or figuring out how to communicate an idea clearly. That's
+  led me to work across marketing, web development, data, research, and
+  design.
 
-  I learned HTML and CSS when I was 13 and never really stopped.
   Outside of school, I enjoy language learning, writing, going down
   psychology rabbit holes, and exploring fashion and visual design.
 
   Long term, I want to work on products where brand, data, and user
   experience all come together. I like being close to the decisions,
-  understanding what works, and figuring out why people respond the
-  way they do.
+  understanding what works, and helping shape what gets built and why.
 `,
     skills: () => `
 [SKILLS]
 
-  Technical:
-    Python | C++ | C# | JavaScript | TypeScript | HTML/CSS | SQL
-    React | Next.js | Git and GitHub | Vercel | Bootstrap | Power BI | Excel
-    UI/UX Design | Wireframing | Figma | LaTeX
-
-  Creative and Marketing:
-    Digital Marketing | Account Management | Adobe Creative Suite | Canva
-    Russian (conversational)
+  Skills:
+    Python | SQL | PostgreSQL | pandas | NumPy | DuckDB | Supabase
+    ETL Pipelines | Data Cleaning & Validation | Web Scraping | BeautifulSoup
+    REST APIs | C++ | C# | JavaScript | TypeScript | HTML/CSS | React
+    Next.js | Git & GitHub | Vercel | Power BI | Excel | UI/UX Design
+    Figma | Wireframing | Adobe Creative Suite | Canva | Account Management
+    Digital Marketing | Russian
 
   Certifications:
     - Google Analytics Certification - Google (Feb 2026)
@@ -97,14 +95,14 @@ export default function PortfolioTerminal() {
     experience: () => `
 [EXPERIENCE]
 
-  Jan 2026 - Present | Marketing Director
-  Computing Student Union (CSU) | Gainesville, FL
-  - Own CSU marketing strategy across campaign direction,
-    channels, and content planning
-  - Lead event promotion across Instagram, announcements,
-    and weekly timelines
-  - Coordinate with leadership and event teams to keep
-    messaging and timing aligned
+  Jun 2026 - Present | Data Engineering Intern
+  BeachLens | Gainesville, FL
+  - Develop end-to-end Python ETL pipelines that ingest,
+    transform, validate, and load multi-source data into
+    BeachLens' production database
+  - Build data-quality workflows that detect inconsistencies,
+    reconcile duplicate records, and standardize datasets before
+    they reach production
 
   Nov 2025 - Present | Account Manager & Data Strategist
   SOLV Digital | Gainesville, FL
@@ -122,7 +120,16 @@ export default function PortfolioTerminal() {
   - Work with teammates to turn campaign needs into
     clear user flows and on-brand page experiences
 
-  Jul 2025 - Present | Social Media and Marketing Manager
+  Jan 2026 - May 2026 | Marketing Director
+  Computing Student Union (CSU) | Gainesville, FL
+  - Own CSU marketing strategy across campaign direction,
+    channels, and content planning
+  - Lead event promotion across Instagram, announcements,
+    and weekly timelines
+  - Coordinate with leadership and event teams to keep
+    messaging and timing aligned
+
+  Jul 2025 - Feb 2026 | Social Media and Marketing Manager
   Golden Egg Cafe | Tampa, FL | Part-time
   - Own the @golden.eggcafe content calendar and campaign
     execution across social channels
@@ -148,14 +155,6 @@ export default function PortfolioTerminal() {
   - Delivered reliable service in a fast-paced setting and
     built strong customer communication skills
 `,
-    involvement: () => `
-[CAMPUS INVOLVEMENT]
-
-  Computing Student Union (CSU) - Marketing Director
-  WiNGHacks - Volunteer
-  Data Science and Informatics (DSI) Student Organization - Member
-  UF Girls Who Code - Member
-`,
     projects: () => `
 [PROJECTS]
 
@@ -180,7 +179,17 @@ export default function PortfolioTerminal() {
      - Result: transformed complex medical data into a practical tool
        for patient decision-making
 
-  3. Museboard Growth and Conversion Analysis
+  3. Gator Quant Hacks Website
+     Sole Designer and Developer | Mar 2026
+     https://www.gqhacks.com/
+     - Designed and built the Gator Quant Hacks website, translating
+       Figma mockups into a responsive React and Next.js experience
+     - Refined the site through multiple feedback rounds before launch,
+       tightening layout, copy, and interaction details
+     - Created custom animations and handled SEO improvements to make
+       the site feel polished and easier to discover
+
+  4. Museboard Growth and Conversion Analysis
      Data Analytics | Client work through SOLV Digital (Associate)
      /projects/museboard-growth-conversion-analysis
      - Mapped the Instagram-to-platform funnel to show exactly where
@@ -190,7 +199,14 @@ export default function PortfolioTerminal() {
      - Used trend and KPI analysis to separate one-time spikes from
        sustained engagement and guide next-step decisions
 
-  4. Gen Z Brand Reputation Research and Presentation
+  5. Film on a Whim
+     Data Structures and Algorithms Project | University of Florida | Jun-Jul 2026
+     https://github.com/alicekrupitsky/Film-On-A-Whim
+     - Built a movie discovery tool using a dataset of 141,976 films
+     - Evaluated custom Max Heap and B+ Tree implementations for
+       filtering and recommending movies
+
+  6. Gen Z Brand Reputation Research and Presentation
      Team Lead and Spokesperson | UF CJCxNYC PR and Ad Week | Burson NYC | May 2026
      /projects/gen-z-brand-reputation-strategy
      - Volunteered as team lead and coordinated direction under a
@@ -199,25 +215,6 @@ export default function PortfolioTerminal() {
        to professionals at Burson's New York office
      - Refined the presentation narrative so complex research and
        strategic implications were clear, polished, and persuasive
-
-  5. Golden Egg Cafe Instagram Content
-     Content Strategy + Performance Review | Ongoing
-     https://www.instagram.com/golden.eggcafe/
-     - Used post-level data to plan campaigns around seasonal demand
-       and customer behavior patterns
-     - Tested and iterated on creative formats, messaging, and offer
-       framing to improve response over time
-     - Built a repeatable content system guided by performance metrics
-
-  6. QuantHacks Website
-     Sole Designer and Developer | Mar 2026
-     https://www.gqhacks.com/
-     - Designed and built the QuantHacks website solo, translating
-       Figma mockups into a responsive React and Next.js experience
-     - Refined the site through multiple feedback rounds before launch,
-       tightening layout, copy, and interaction details
-     - Created custom animations and handled SEO improvements to make
-       the site feel polished and easier to discover
 
   7. Wawa Consumer Insights Study
      Research Lead | Digital Insights, University of Florida | Mar 2026

@@ -44,22 +44,22 @@ export default function Home() {
             </aside>
 
             <p>
-              Hi, I&apos;m Alice Krupitsky, a third-year Advertising student
-              at UF with a minor in Computer Science and an AI Fundamentals
-              Certificate. I&apos;m drawn to bold creative work and the data,
-              psychology, and technology behind what makes it effective.
+              I&apos;m an Advertising student at UF with a minor in Computer
+              Science and an AI Fundamentals Certificate. I&apos;m most interested
+              in work that brings together technical thinking and an understanding
+              of people, especially when it comes to figuring out what people
+              respond to and why.
             </p>
 
             <p>
-              Growing up in a Russian household in Tampa got me thinking early
-              about how much communication matters. The same message can land
-              completely differently depending on who&apos;s hearing it, and
-              that still shapes how I approach audiences, messaging, and
-              branding.
+              I like being involved in different sides of a project, whether
+              that means building something, digging into data, thinking through
+              the user experience, or figuring out how to communicate an idea
+              clearly. That&apos;s led me to work across marketing, web development,
+              data, research, and design.
             </p>
 
             <p>
-              I learned HTML and CSS when I was 13 and never really stopped.
               Outside of school, I enjoy language learning, writing, going down
               psychology rabbit holes, and exploring fashion and visual design.
             </p>
@@ -67,8 +67,8 @@ export default function Home() {
             <p>
               Long term, I want to work on products where brand, data, and
               user experience all come together. I like being close to the
-              decisions, understanding what works, and figuring out why people
-              respond the way they do.
+              decisions, understanding what works, and helping shape what gets
+              built and why.
             </p>
           </div>
         </div>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import RealismButton from "@/components/ui/shiny-borders-button";
 import neuroviewpic from "@/app/neuroviewpic.jpg";
-import goldeneggcafe from "@/app/goldeneggcafe.jpg";
 import cjcNycGroupPic from "@/app/CJCxNYCgroupPic.jpg";
 
 function ProjectWindow({
@@ -145,6 +144,88 @@ export default function ProjectsPage() {
             </ul>
           </ProjectWindow>
 
+          <ProjectWindow title="Gator Quant Hacks Website">
+            <div className="projectSectionSubheading">
+              <a
+                href="https://www.gqhacks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectTitleLink"
+              >
+                <span>Visit Site</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </a>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText">Designer & Developer | Mar 2026</span>
+            </div>
+
+            <div className="projectTagRow">
+              <span className="projectTag">React</span>
+              <span className="projectTag">Next.js</span>
+              <span className="projectTag">Figma</span>
+              <span className="projectTag">SEO</span>
+            </div>
+            <ul>
+              <li>Designed and built the Gator Quant Hacks website, translating Figma mockups into a responsive React and Next.js experience.</li>
+              <li>Refined the site through multiple feedback rounds before launch, tightening layout, copy, and interaction details.</li>
+              <li>Created custom animations and handled SEO improvements to make the site feel polished and easier to discover.</li>
+            </ul>
+          </ProjectWindow>
+
+          <ProjectWindow title="Museboard Growth & Conversion Analysis">
+            <div className="projectSectionSubheading">
+              <Link href="/projects/museboard-growth-conversion-analysis" className="projectTitleLink">
+                <span>View Case Study</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </Link>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText">Data Analytics | Client work through SOLV Digital | Mar 2026</span>
+            </div>
+
+            <div className="projectTagRow">
+              <span className="projectTag">Power BI</span>
+              <span className="projectTag">Funnel Analysis</span>
+              <span className="projectTag">KPI Tracking</span>
+            </div>
+            <ul>
+              <li>Mapped the Instagram-to-platform funnel to show exactly where discovery stopped converting into product usage.</li>
+              <li>Identified profile visit to link click as the key bottleneck, which clarified where growth experiments should focus first.</li>
+              <li>Used trend and KPI analysis to distinguish one-time spikes from sustained engagement and guide next-step product and marketing decisions.</li>
+            </ul>
+          </ProjectWindow>
+
+          <ProjectWindow title="Film on a Whim">
+            <div className="projectSectionSubheading">
+              <a
+                href="https://github.com/alicekrupitsky/Film-On-A-Whim"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="projectTitleLink"
+              >
+                <span>View on GitHub</span>
+                <ArrowUpRight size={24} strokeWidth={2.4} />
+              </a>
+            </div>
+
+            <div className="meta cardMetaRow">
+              <span className="cardMetaText">Data Structures &amp; Algorithms Project | University of Florida | Jun–Jul 2026</span>
+            </div>
+
+            <div className="projectTagRow">
+              <span className="projectTag">C++</span>
+              <span className="projectTag">Data Structures</span>
+              <span className="projectTag">Data Processing</span>
+            </div>
+            <ul>
+              <li>Built a movie discovery tool using a dataset of 141,976 films.</li>
+              <li>Evaluated custom Max Heap and B+ Tree implementations for filtering and recommending movies.</li>
+            </ul>
+          </ProjectWindow>
+
           <ProjectWindow title="Gen Z Brand Reputation Research & Presentation">
             <div className="projectSectionSubheading">
               <Link href="/projects/gen-z-brand-reputation-strategy" className="projectTitleLink">
@@ -194,60 +275,6 @@ export default function ProjectsPage() {
             </div>
           </ProjectWindow>
 
-          <ProjectWindow title="Museboard Growth & Conversion Analysis">
-            <div className="projectSectionSubheading">
-              <Link href="/projects/museboard-growth-conversion-analysis" className="projectTitleLink">
-                <span>View Case Study</span>
-                <ArrowUpRight size={24} strokeWidth={2.4} />
-              </Link>
-            </div>
-
-            <div className="meta cardMetaRow">
-              <span className="cardMetaText">Data Analytics | Client work through SOLV Digital | Mar 2026</span>
-            </div>
-
-            <div className="projectTagRow">
-              <span className="projectTag">Power BI</span>
-              <span className="projectTag">Funnel Analysis</span>
-              <span className="projectTag">KPI Tracking</span>
-            </div>
-            <ul>
-              <li>Mapped the Instagram-to-platform funnel to show exactly where discovery stopped converting into product usage.</li>
-              <li>Identified profile visit to link click as the key bottleneck, which clarified where growth experiments should focus first.</li>
-              <li>Used trend and KPI analysis to distinguish one-time spikes from sustained engagement and guide next-step product and marketing decisions.</li>
-            </ul>
-          </ProjectWindow>
-
-          <ProjectWindow title="QuantHacks Website">
-            <div className="projectSectionSubheading">
-              <a
-                href="https://www.gqhacks.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="projectTitleLink"
-              >
-                <span>Visit Site</span>
-                <ArrowUpRight size={24} strokeWidth={2.4} />
-              </a>
-            </div>
-
-            <div className="meta cardMetaRow">
-              <span className="cardMetaText">Designer & Developer | Mar 2026</span>
-            </div>
-
-            <div className="projectTagRow">
-              <span className="projectTag">React</span>
-              <span className="projectTag">Next.js</span>
-              <span className="projectTag">Figma</span>
-              <span className="projectTag">SEO</span>
-            </div>
-            <ul>
-              <li>Designed and built the QuantHacks website solo, translating Figma mockups into a responsive React and Next.js experience.</li>
-              <li>Refined the site through multiple feedback rounds before launch, tightening layout, copy, and interaction details.</li>
-              <li>Created custom animations and handled SEO improvements to make the site feel polished and easier to discover.</li>
-            </ul>
-          </ProjectWindow>
-
           <ProjectWindow title="Wawa Consumer Insights Study">
             <div className="projectSectionSubheading">
               <a
@@ -275,61 +302,6 @@ export default function ProjectsPage() {
               <li>Analyzed response data to translate behavioral patterns into usable insights.</li>
               <li>Built a data-driven persona that shaped the team&apos;s strategic recommendations for Wawa.</li>
             </ul>
-          </ProjectWindow>
-
-          <ProjectWindow title="Golden Egg Cafe Instagram Content">
-            <div className="projectSectionSubheading">
-              <a
-                href="https://www.instagram.com/golden.eggcafe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="projectTitleLink"
-              >
-                <span>View Instagram</span>
-                <ArrowUpRight size={24} strokeWidth={2.4} />
-              </a>
-            </div>
-
-            <div className="meta cardMetaRow">
-              <span className="cardMetaText">Content Strategy + Performance Review | Ongoing</span>
-            </div>
-
-            <div className="aboutContent">
-              <div className="aboutPhotoWrap" style={{ width: "177px", marginTop: "10px" }}>
-                <div className="aboutPhotoWindow">
-                  <div className="aboutPhotoTop">
-                    <div className="aboutPhotoTopLeft">
-                      <div className="dots aboutPhotoDots">
-                        <div className="dot red"></div>
-                        <div className="dot yellow"></div>
-                        <div className="dot green"></div>
-                      </div>
-                      <span>GEcafe.jpg</span>
-                    </div>
-                  </div>
-                  <div className="aboutPhotoBody">
-                    <div className="aboutPhotoFrame">
-                      <img
-                        src={goldeneggcafe.src}
-                        alt="Golden Egg Cafe content preview"
-                        className="aboutPhotoImg"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="projectTagRow">
-                <span className="projectTag">Content Strategy</span>
-                <span className="projectTag">Creative Testing</span>
-                <span className="projectTag">Audience Messaging</span>
-              </div>
-              <ul>
-                <li>Used post-level data to plan campaigns around seasonal demand and customer behavior patterns.</li>
-                <li>Tested and iterated on creative formats, messaging, and offer framing to improve response over time.</li>
-                <li>Built a repeatable content system guided by performance metrics</li>
-              </ul>
-            </div>
           </ProjectWindow>
 
           <ProjectWindow title="Tetris">

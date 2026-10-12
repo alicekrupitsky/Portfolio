@@ -985,23 +985,32 @@ a:hover {
 
 .homeAboutPhotoWrap {
   float: right;
-  width: clamp(240px, 31%, 320px);
+  width: clamp(260px, 33%, 340px);
   margin: 12px 0 18px 22px;
   shape-outside: inset(0 round 8px);
   shape-margin: 18px;
 }
 
+.homeAboutPhotoWrap .aboutPhotoFrame {
+  overflow: hidden;
+}
+
 .homeAboutPhotoWrap .aboutPhotoImg {
   max-width: none;
+  aspect-ratio: 4 / 4.75;
+  object-position: 44% 75%;
+  transform: scale(1.15);
+  transform-origin: 44% 75%;
 }
 
 .homeAboutContent p {
   max-width: none;
+  font-size: 25px;
 }
 
 @media (max-width: 900px) {
   .homeAboutPhotoWrap {
-    width: 260px;
+    width: 280px;
     margin-left: 24px;
   }
 }
@@ -1204,6 +1213,7 @@ a:hover {
 }
 
 .experienceTimelineMediaWrap {
+  max-width: 100%;
   width: 178px;
   float: right;
   margin-left: 0.45rem;
@@ -1469,6 +1479,23 @@ a:hover {
   }
 }
 
+@media (max-width: 899px) {
+  .experienceTimelineItem {
+    padding-top: 58px;
+  }
+
+  .experienceTimelineNodeWrap {
+    left: 28px;
+    top: 24px;
+  }
+
+  .experienceTimelineDateBadge.is-left,
+  .experienceTimelineDateBadge.is-right {
+    left: 24px;
+    right: auto;
+  }
+}
+
 @media (max-width: 700px) {
   .experienceTimelineTitle {
     font-size: 34px;
@@ -1495,8 +1522,8 @@ a:hover {
   }
 
   .experienceTimelineNodeWrap {
-    left: 16px;
-    top: 28px;
+    left: 28px;
+    top: 24px;
   }
 
   .experienceTimelineDateBadge {

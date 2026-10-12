@@ -8,6 +8,7 @@ import solvLogo from "@/app/SolvLogo.jpg";
 import swampRecordsPic from "@/app/srpic.jpg";
 import ufcsuLogo from "@/app/ufcsulogo.png";
 import beachLensLogo from "@/app/beachLensLogo.png";
+import gqhSignage from "@/app/GQHsignage.png";
 import {
   BriefcaseBusiness,
   Building2,
@@ -22,7 +23,7 @@ export default function ExperiencePage() {
   const timelineEvents: TimelineEvent[] = [
     {
       id: "beachlens",
-      date: "Jun 2026 - Present",
+      date: "Jun 2026 - Sep 2026",
       title: "Data Engineering Intern - BeachLens",
       description: "",
       icon: <Database className="h-5 w-5" />,
@@ -61,7 +62,7 @@ export default function ExperiencePage() {
     {
       id: "swamp-records",
       date: "Jan 2026 – Present",
-      title: "Web Developer - Swamp Records",
+      title: "Lead Web Developer - Swamp Records",
       description: "",
       icon: <Code2 className="h-5 w-5" />,
       category: "Development",
@@ -76,6 +77,26 @@ export default function ExperiencePage() {
       bullets: [
         "Build and maintain artist-facing web features using React, Next.js, and TypeScript, deployed via Vercel.",
         "Partner with teammates to translate requirements into usable UI, balancing design, accessibility, and performance.",
+      ],
+    },
+    {
+      id: "gqh",
+      date: "Mar 2026 – Oct 2026",
+      title: "Head of Marketing - Gator Quant Hacks (GQH)",
+      description: "",
+      icon: <Megaphone className="h-5 w-5" />,
+      category: "Leadership",
+      color: "#5c93bd",
+      location: "Gainesville, FL",
+      mediaWindow: {
+        src: gqhSignage.src,
+        alt: "Gator Quant Hacks event signage",
+        label: "GQHsignage.png",
+      },
+      mediaPlacement: "bottom",
+      bullets: [
+        "Led marketing for UF's first quantitative finance hackathon, held October 2–4, 2026, attracting 400+ applications and approximately 220 participants from universities nationwide.",
+        "Built and led marketing and photography teams from scratch, overseeing social media, event branding, merchandise, and promotional campaigns in coordination with event organizers and sponsors.",
       ],
     },
     {
@@ -146,7 +167,7 @@ export default function ExperiencePage() {
       color: "#587645",
       location: "Tampa, FL",
       bullets: [
-        "Delivered high-quality service in a fast-paced, high-volume environment and built strong conflict-resolution skills.",
+        "Trained two new employees while working in a fast-paced environment.",
       ],
     },
   ];

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export interface TimelineEvent {
@@ -44,16 +43,12 @@ export function Timeline3D({
 
       <div className="experienceTimelineList">
         {events.map((event, index) => (
-          <motion.article
+          <article
             key={event.id}
             className={cn(
               "experienceTimelineItem",
               index % 2 === 0 ? "is-left" : "is-right"
             )}
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
           >
             <div className="experienceTimelineNodeWrap">
               <div
@@ -261,7 +256,7 @@ export function Timeline3D({
                 </div>
               </div>
             </div>
-          </motion.article>
+          </article>
         ))}
       </div>
     </section>

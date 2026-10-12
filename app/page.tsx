@@ -1,6 +1,6 @@
 import PageShell from "@/components/page-shell";
 import SiteHeaderTitles from "@/components/ui/site-header-titles";
-import AliceHeadShot from "@/app/AliceHeadShot.jpg";
+import AliceTalking from "@/app/AliceTalking.jpg";
 
 export default function Home() {
   return (
@@ -28,13 +28,13 @@ export default function Home() {
                       <div className="dot yellow"></div>
                       <div className="dot green"></div>
                     </div>
-                    <span>pfp.jpg</span>
+                    <span>me.jpg</span>
                   </div>
                 </div>
                 <div className="aboutPhotoBody">
                   <div className="aboutPhotoFrame">
                     <img
-                      src={AliceHeadShot.src}
+                      src={AliceTalking.src}
                       alt="Alice Krupitsky"
                       className="aboutPhotoImg"
                     />
@@ -45,30 +45,29 @@ export default function Home() {
 
             <p>
               I&apos;m an Advertising student at UF with a minor in Computer
-              Science and an AI Fundamentals Certificate. I&apos;m most interested
-              in work that brings together technical thinking and an understanding
-              of people, especially when it comes to figuring out what people
-              respond to and why.
+              Science and an AI Fundamentals Certificate. I&apos;ve worked across
+              data, web development, and marketing, and I genuinely love all of it.
             </p>
 
             <p>
-              I like being involved in different sides of a project, whether
-              that means building something, digging into data, thinking through
-              the user experience, or figuring out how to communicate an idea
-              clearly. That&apos;s led me to work across marketing, web development,
-              data, research, and design.
+              I&apos;m happiest when I can take ownership of something, figure
+              things out as I go, and see it through. If I don&apos;t know how
+              something works yet, I want to find out.
             </p>
 
             <p>
-              Outside of school, I enjoy language learning, writing, going down
-              psychology rabbit holes, and exploring fashion and visual design.
-            </p>
-
-            <p>
-              Long term, I want to work on products where brand, data, and
-              user experience all come together. I like being close to the
-              decisions, understanding what works, and helping shape what gets
-              built and why.
+              Outside of school, I enjoy {" "}
+              <a
+                href="https://www.instagram.com/shotzbyalice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inlineLink"
+              >
+                photography
+              </a>
+              , language learning, writing,
+              going down psychology rabbit holes, and exploring fashion and
+              visual design.
             </p>
           </div>
         </div>

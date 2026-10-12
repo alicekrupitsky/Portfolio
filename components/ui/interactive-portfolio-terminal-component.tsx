@@ -95,7 +95,7 @@ export default function PortfolioTerminal() {
     experience: () => `
 [EXPERIENCE]
 
-  Jun 2026 - Present | Data Engineering Intern
+  Jun 2026 - Sep 2026 | Data Engineering Intern
   BeachLens | Gainesville, FL
   - Develop end-to-end Python ETL pipelines that ingest,
     transform, validate, and load multi-source data into
@@ -113,7 +113,7 @@ export default function PortfolioTerminal() {
     acquisition drop-off point, directly informing adjustments
     to content strategy and product direction
 
-  Jan 2026 - Present | Web Developer
+  Jan 2026 - Present | Lead Web Developer
   Swamp Records | Gainesville, FL | Part-time
   - Build and ship responsive website updates for artist
     and event content

@@ -984,9 +984,11 @@ a:hover {
 }
 
 .homeAboutPhotoWrap {
+  position: relative;
+  left: -4px;
   float: right;
-  width: clamp(260px, 33%, 340px);
-  margin: 12px 0 18px 22px;
+  width: clamp(280px, 35%, 360px);
+  margin: 15px 0 18px 22px;
   shape-outside: inset(0 round 8px);
   shape-margin: 18px;
 }
@@ -1010,7 +1012,7 @@ a:hover {
 
 @media (max-width: 900px) {
   .homeAboutPhotoWrap {
-    width: 280px;
+    width: 300px;
     margin-left: 24px;
   }
 }
@@ -1021,7 +1023,7 @@ a:hover {
   }
 
   .homeAboutPhotoWrap {
-    margin: 0 auto 1.5rem;
+    margin: 3px auto 1.5rem;
   }
 }
 
